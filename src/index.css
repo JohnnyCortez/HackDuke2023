@@ -49,7 +49,7 @@ ul.navbar-list {
     font-family: 'Open Sans', sans-serif;
     font-weight: lighter;
     color: #45503b;
-    font-size: 200%;
+
   }
 
 #home-logo img {
@@ -183,4 +183,28 @@ margin-right: 70px;
     width: 100%;
     margin-left: 10%;
     /* padding: 0% 0 0 25%; */
+  }
+
+  .home-image {
+    display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 80vh; /* Optional: Center within the viewport's height */
+  }
+/*
+  .navigate-left {
+    display: flex;
+  }
+
+  .navigate-right {
+    display: flex;
+  } */
+  .button-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between; /* Spread the buttons to opposite ends */
+    align-items: center; /* Vertically center align the buttons */
+    width: 100%; /* Ensure the container spans the full width of the parent */
+    top:-395px;
+    color: #45503b;
   }

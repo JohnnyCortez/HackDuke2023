@@ -34,7 +34,7 @@ function App() {
   async function signOut() {
     try {
       const { error } = await supabase.auth.signOut();
-  
+
       if (error) {
         console.error('Error signing out:', error.message);
       } else {
@@ -49,10 +49,8 @@ function App() {
   return (
     <>
     <body>
-    <h1>Eco Start</h1>
     <ul className="navbar-list">
-      <li id = "home-logo"><img src = "https://e7.pngegg.com/pngimages/964/395/png-clipart-natural-environment-graphics-environmental-science-natural-environment-globe-logo.png"></img>EcoStart</li>
-      <li><a href="/">Home</a></li>
+      <li id = "home-logo"><a href = "/">Ecostart</a><img src = "https://e7.pngegg.com/pngimages/964/395/png-clipart-natural-environment-graphics-environmental-science-natural-environment-globe-logo.png"></img></li>
       <li><a href="/news">News</a></li>
       <li><a href="/information">Information</a></li>
       <li><a href="/getInvolved">Get Involved</a></li>
