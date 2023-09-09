@@ -38,10 +38,12 @@ ul.navbar-list {
   ul.navbar-list li a:hover {
     color: #00bcd4; /* Hover color for links */
   }
+/* styles.css */
+.banner-image {
 
+width: 100%;
 
-
-
-.information-reduce{
-    text-align: left;
-}
+  height: 200px;
+  background-color: purple;
+  background-position: center;
+  }
