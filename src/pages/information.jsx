@@ -12,9 +12,9 @@ function Information() {
 
     <div class="carbon-footprint-container">
         <p> 
-        Reducing your carbon footprint is an important step towards mitigating climate change and minimizing your environmental impact. <br>
-        </br>       
-        Here are several strategies and lifestyle changes you can consider to reduce your carbon footprint:
+        <b>Reducing</b> your carbon footprint is an important step towards <b>mitigating</b> climate change and <b>minimizing</b> your environmental impact.
+        <br></br> <br></br>       
+        Here are <b>10 strategies</b> and lifestyle changes you can consider to reduce your carbon footprint:
         </p>
         <div id="carbon-footprint-img">
             <img src="https://static01.nyt.com/images/2019/05/07/smarter-living/07carbonfootprint-slide-SUBX/carbonfootprint-slide-SUBX-jumbo.jpg" alt = "People taking a look at their carbon footprint"></img>
