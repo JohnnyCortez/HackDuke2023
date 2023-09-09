@@ -9,13 +9,13 @@ import GetInvolved from './pages/getInvolved'
 import News from './pages/news'
 import CreateAccount from './pages/createAccount'
 import SignIn from './pages/signIn'
-
+import './index.css'
 function App() {
 
   return (
     <>
     <h1>Eco Start</h1>
-    <ul>
+    <ul className = "navbar-list">
       <li><a href = "/" >Home</a></li>
       <li><a href = "/news" >News</a></li>
       <li><a href = "/information" >Information</a></li>

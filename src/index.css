@@ -1,0 +1,28 @@
+/* Navbar.css */
+
+/* Style for the navigation list */
+ul.navbar-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #45503b; /* Background color for the navbar */
+    display: flex;
+  }
+
+  /* Style for each navigation item (list item) */
+  ul.navbar-list li {
+    padding: 10px 20px; /* Adjust padding as needed */
+  }
+
+  /* Style for the navigation links (anchors) */
+  ul.navbar-list li a {
+    text-decoration: none; /* Remove underlines from links */
+    color: #fff; /* Text color for links */
+    font-weight: bold;
+    transition: color 0.3s; /* Smooth color transition on hover */
+  }
+
+  /* Change link color on hover */
+  ul.navbar-list li a:hover {
+    color: #00bcd4; /* Hover color for links */
+  }
