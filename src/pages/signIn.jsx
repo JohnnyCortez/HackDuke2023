@@ -22,6 +22,7 @@ function SignIn() {
     } catch (error) {
         console.error('Error:', error.message);
     }
+    window.location = "/";
     }
 
     function handleClick() {
