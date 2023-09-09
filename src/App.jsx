@@ -14,7 +14,7 @@ function App() {
 
   return (
     <>
-    <h1>Planet Protectors</h1>
+    <h1>Eco Start</h1>
     <ul>
       <li><a href = "/" >Home</a></li>
       <li><a href = "/news" >News</a></li>
