@@ -10,6 +10,23 @@ function CreateAccount() {
     const [bio, setBio] = useState(null)
     const [password, setPassword] = useState(null)
 
+    async function signUp(username, password) {
+        try {
+          const { user, error } = await supabase.auth.signUp({
+            email: username, // Use the email field for the username
+            password: password,
+          });
+      
+          if (error) {
+            console.error('Error signing up:', error.message);
+          } else {
+            console.log('User signed up:', user);
+          }
+        } catch (error) {
+          console.error('Error:', error.message);
+        }
+    }
+
 
     const addAccount = async () => {
         await supabase
@@ -21,11 +38,10 @@ function CreateAccount() {
             state: state,
             zipCode: zipCode,
             bio: bio,
-            password: password,
           })
           .select();
-        console.log("success");
-        window.location = "/";
+          signUp(username, password)
+        // window.location = "/";
       };
 
       function handleClick() {
@@ -44,7 +60,7 @@ function CreateAccount() {
 
           <label>Password:</label>
           <input
-            type="text"
+            type="password"
             onChange={(e) => setPassword(e.target.value)}
           />
 
@@ -65,7 +81,6 @@ function CreateAccount() {
             type="text"
             onChange={(e) => setCity(e.target.value)}
           />
-          <br />
 
           <label>State:</label>
           <input
@@ -75,9 +90,10 @@ function CreateAccount() {
 
           <label>Zip Code:</label>
           <input
-            type="text"
+            type="number"
             onChange={(e) => setZipCode(e.target.value)}
           />
+          <br />
           <button onClick={handleClick}>Submit</button>
         </div>
 
