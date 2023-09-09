@@ -41,7 +41,7 @@ function CreateAccount() {
           })
           .select();
           signUp(username, password)
-        // window.location = "/";
+          window.location = "/";
       };
 
       function handleClick() {
