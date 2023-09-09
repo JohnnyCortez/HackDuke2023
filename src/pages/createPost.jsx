@@ -1,9 +1,30 @@
-import { useState } from 'react';
-import { supabase } from '../client'; // Import the Supabase client
+import { useEffect, useState } from 'react';
+import { supabase } from '../client';
 
 function CreatePost() {
   const [text, setText] = useState('');
   const [selectedFile, setSelectedFile] = useState(null);
+  const [user, setUser] = useState(null);
+
+  async function verify() {
+    const { data } = await supabase.auth.getSession();
+    return data;
+  }
+
+  async function logData() {
+    try {
+      const data = await verify();
+      setUser(data);
+    } catch (error) {
+      console.error('Error:', error.message);
+    }
+  }
+
+  useEffect(() => {
+    logData();
+  }, []);
+
+  console.log(user)
 
   const handleFileChange = (e) => {
     setSelectedFile(e.target.files[0]);
@@ -19,9 +40,9 @@ function CreatePost() {
       // Generate a unique filename for the uploaded image
       const fileName = `${Date.now()}_${selectedFile.name}`;
 
-      // Upload the image to Supabase Storage
+      // Upload the image to Supabase Storage in the "posts" bucket
       const { data, error } = await supabase.storage
-        .from('your-storage-bucket-name')
+        .from('posts')
         .upload(fileName, selectedFile);
 
       if (error) {
@@ -37,12 +58,12 @@ function CreatePost() {
         .from('posts')
         .insert([
           {
-            authorEmail: supabase.auth.user().email,
+            authorEmail: user?.session.user.email,
             text: text,
-            images: [imageUrl], // Store the image URL(s)
-            likes: 0, // Initialize likes count
+            image_url: imageUrl, // Store the image URL
           },
-        ]);
+        ])
+        .single();
 
       if (postError) {
         console.error('Error creating post:', postError.message);
