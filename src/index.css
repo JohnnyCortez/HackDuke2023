@@ -256,7 +256,7 @@ margin-right: 70px;
     align-items: center; /* Vertically center align the buttons */
     width: 100%; /* Ensure the container spans the full width of the parent */
     top:-395px;
-    color: #45503b;
+
   }
     line-height: 2.3;
 }
@@ -285,4 +285,11 @@ margin-right: 70px;
     align-items: center;
     margin: 10% 50% 10% 50%;
     font-size: 300%;
+}
+
+.mission-image {
+    position: relative;
+    top: -90px;
+    display: flex;
+    justify-content: center;
 }
