@@ -15,7 +15,9 @@ function App() {
 
   return (
     <>
+    <body>
     <h1>Eco Start</h1>
+
     <ul className = "navbar-list">
       <li><a href = "/" >Home</a></li>
       <li><a href = "/news" >News</a></li>
@@ -25,6 +27,7 @@ function App() {
       <li><a href = "/signIn" >Sign In</a></li>
       <li><a href = "/createAccount" >Create Account</a></li>
     </ul>
+    </body>
      <Routes>
         <Route exact path = "/account" element = {<Account/>} />
         <Route exact path = "/discussion" element = {<Discussion/>} />

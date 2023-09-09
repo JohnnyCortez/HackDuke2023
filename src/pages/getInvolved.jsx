@@ -5,7 +5,7 @@ function GetInvolved() {
     return (
         <>
         <h2>Get Involved</h2>
-
+            
         </>
     )
 }
