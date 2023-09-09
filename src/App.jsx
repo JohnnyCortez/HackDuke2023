@@ -57,9 +57,10 @@ function App() {
       <li><a href="/getInvolved">Get Involved</a></li>
       <li><a href="/discussion">Discussion</a></li>
       {user ? (
-        <li><a href="/" onClick={(e) => { e.preventDefault(); signOut(); }}>Sign Out</a>
+        <>
+        <li><a href="/" onClick={(e) => { e.preventDefault(); signOut(); }}>Sign Out</a></li>
         <li><a href="/createPost" >Post</a></li>
-        </li>
+        </>
       ) : (
         <>
           <li><a href="/signIn">Sign In</a></li>
