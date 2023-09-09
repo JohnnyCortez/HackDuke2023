@@ -10,6 +10,7 @@ import News from './pages/news'
 import CreateAccount from './pages/createAccount'
 import SignIn from './pages/signIn'
 import Home from './pages/home'
+import CreatePost from './pages/createPost'
 import { supabase } from './client'
 
 function App() {
@@ -59,6 +60,7 @@ function App() {
       <li><a href="/discussion">Discussion</a></li>
       {user ? (
         <li><a href="/" onClick={(e) => { e.preventDefault(); signOut(); }}>Sign Out</a>
+        <li><a href="/createPost" >Post</a></li>
         </li>
       ) : (
         <>
@@ -67,6 +69,11 @@ function App() {
         </>
       )}
       </ul>
+      {user ? (
+        <p>Welcome {user}</p>
+      ) : (
+        ""
+      )}
     </body>
   <Routes>
     <Route exact path="/account" element={<Account />} />
@@ -77,6 +84,7 @@ function App() {
     <Route exact path="/news" element={<News />} />
     <Route exact path="/createAccount" element={<CreateAccount />} />
     <Route exact path="/signIn" element={<SignIn />} />
+    <Route exact path="/createPost" element={<CreatePost />} />
     <Route exact path="/" element={<Home />} />
   </Routes>
   </>
