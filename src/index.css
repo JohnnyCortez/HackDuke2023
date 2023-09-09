@@ -33,7 +33,26 @@ ul.navbar-list {
     color: #45503b;
     font-size: 200%;
   }
+  #home-logo {
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: center; /* Vertically center the items (optional) */
+    font-size: 200%;
+    font-weight: bold;
+    transition: color 0.3s; /* Smooth color transition on hover */
+    font-family: 'EB Garamond', serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+    color: #45503b;
+    font-size: 200%;
+  }
 
+#home-logo img {
+    width: 100px;
+    height: auto;
+    margin-top: -10px;
+
+}
   /* Change link color on hover */
   ul.navbar-list li a:hover {
     color: #00bcd4; /* Hover color for links */
@@ -46,4 +65,10 @@ width: 100%;
   height: 200px;
   background-color: purple;
   background-position: center;
+
   }
+
+.getInvolvedImageText {
+    width: 50%;
+    font-size: 120%;
+}
