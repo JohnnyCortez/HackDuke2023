@@ -3,17 +3,19 @@ import { supabase } from "../client";
 
 function CreateAccount() {
     const [username, setUsername] = useState(null)
+    const [email, setEmail] = useState(null)
     const [country, setCountry] = useState(null)
     const [city, setCity] = useState(null)
     const [state, setState] = useState(null)
     const [zipCode, setZipCode] = useState(null)
     const [bio, setBio] = useState(null)
     const [password, setPassword] = useState(null)
+    const [confirm, setConfirm] = useState(false)
 
-    async function signUp(username, password) {
+    async function signUp(email, password) {
         try {
           const { user, error } = await supabase.auth.signUp({
-            email: username, // Use the email field for the username
+            email: email, // Use the email field for the username
             password: password,
           });
       
@@ -33,6 +35,7 @@ function CreateAccount() {
           .from("accounts")
           .insert({
             username: username,
+            email: email,
             country: country,
             city: city,
             state: state,
@@ -40,19 +43,29 @@ function CreateAccount() {
             bio: bio,
           })
           .select();
-          signUp(username, password)
-          window.location = "/";
+
+          signUp(email, password)
+        //   window.location = "/";
       };
 
       function handleClick() {
         addAccount();
+        setConfirm(true)
       }
 
     return (
         <>
+        {confirm ? <p>Please Confirm Your email</p> :
+        (<>
         <h2>Create Account</h2>
         <div class="form">
-          <label>User Name:</label>
+          <label>Email:</label>
+          <input
+            type="email"
+            onChange={(e) => setEmail(e.target.value)}
+          />
+
+          <label>Username:</label>
           <input
             type="text"
             onChange={(e) => setUsername(e.target.value)}
@@ -96,7 +109,8 @@ function CreateAccount() {
           <br />
           <button onClick={handleClick}>Submit</button>
         </div>
-
+        </>)
+        }
         </>
     )
 }
