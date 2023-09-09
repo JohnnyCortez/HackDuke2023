@@ -1,33 +1,38 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import {Routes, Route} from "react-router-dom"
+import Information from './pages/information'
+import Account from './pages/account'
+import Discussion from './pages/Discussion'
+import FootPrint from './pages/footprint'
+import GetInvolved from './pages/getInvolved'
+import News from './pages/news'
+import CreateAccount from './pages/createAccount'
+import SignIn from './pages/signIn'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <h1>Planet Protectors</h1>
+    <ul>
+      <li><a href = "/" >Home</a></li>
+      <li><a href = "/news" >News</a></li>
+      <li><a href = "/information" >Information</a></li>
+      <li><a href = "/getInvolved" >Get Involved</a></li>
+      <li><a href = "/discussion" >Discussion</a></li>
+      <li><a href = "/signIn" >Sign In</a></li>
+    </ul>
+     <Routes>
+        <Route exact path = "/account" element = {<Account/>} />
+        <Route exact path = "/discussion" element = {<Discussion/>} />
+        <Route exact path = "/footPrint" element = {<FootPrint/>} />
+        <Route exact path = "/getInvolved" element = {<GetInvolved/>} />
+        <Route exact path = "/information" element = {<Information/>} />
+        <Route exact path = "/news" element = {<News/>} />
+        <Route exact path = "/createAccount" element = {<CreateAccount/>} />
+        <Route exact path = "/signIn" element = {<SignIn/>} />
+     </Routes>
     </>
   )
 }
