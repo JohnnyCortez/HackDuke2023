@@ -3,14 +3,14 @@ import { supabase } from "../client";
 
 
 function SignIn() {
-    const [username, setUsername] = useState(null)
+    const [email, setEmail] = useState(null)
     const [password, setPassword] = useState(null)
 
 
-    async function signIn(username, password) {
+    async function signIn(email, password) {
     try {
         const { user, error } = await supabase.auth.signInWithPassword({
-        email: username, // Use the email field for the username
+        email: email, // Use the email field for the username
         password: password,
         });
 
@@ -26,17 +26,17 @@ function SignIn() {
     }
 
     function handleClick() {
-        signIn(username, password);
+        signIn(email, password);
       }
 
     return (
         <>
         <h2>Sign In</h2>
         <div class="form">
-          <label>User Name:</label>
+          <label>Email:</label>
           <input
             type="text"
-            onChange={(e) => setUsername(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
           />
 
           <label>Password:</label>
