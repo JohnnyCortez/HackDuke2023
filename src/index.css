@@ -38,3 +38,10 @@ ul.navbar-list {
   ul.navbar-list li a:hover {
     color: #00bcd4; /* Hover color for links */
   }
+
+
+
+
+.information-reduce{
+    text-align: left;
+}
