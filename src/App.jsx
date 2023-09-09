@@ -9,6 +9,7 @@ import GetInvolved from './pages/getInvolved'
 import News from './pages/news'
 import CreateAccount from './pages/createAccount'
 import SignIn from './pages/signIn'
+import Home from './pages/home'
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
         <Route exact path = "/news" element = {<News/>} />
         <Route exact path = "/createAccount" element = {<CreateAccount/>} />
         <Route exact path = "/signIn" element = {<SignIn/>} />
+        <Route exact path = "/" element = {<Home/>} />
      </Routes>
     </>
   )
