@@ -7,14 +7,21 @@ function Information() {
         {/* <h2>Information</h2> */}
 
 <div class="information-reduce">
-
     <h2> Reduce Your Carbon Footprint 🌱 </h2>
 
-    <p> 
-    Reducing your carbon footprint is an important step towards mitigating climate change and minimizing your environmental impact. <br>
-    </br>       
-    Here are several strategies and lifestyle changes you can consider to reduce your carbon footprint: <br></br>
-    <br></br>
+
+    <div class="carbon-footprint-container">
+        <p> 
+        <b>Reducing</b> your carbon footprint is an important step towards <b>mitigating</b> climate change and <b>minimizing</b> your environmental impact.
+        <br></br> <br></br>       
+        Here are <b>10 strategies</b> and lifestyle changes you can consider to reduce your carbon footprint:
+        </p>
+        <div id="carbon-footprint-img">
+            <img src="https://static01.nyt.com/images/2019/05/07/smarter-living/07carbonfootprint-slide-SUBX/carbonfootprint-slide-SUBX-jumbo.jpg" alt = "People taking a look at their carbon footprint"></img>
+        </div>
+    </div>
+
+    
 
     <h3> 1. Energy Efficiency: </h3>
     <ul> 
@@ -101,25 +108,25 @@ function Information() {
 
 Reducing your carbon footprint is a gradual process that involves making sustainable choices in various aspects of your life. It's important to remember that every small change you make can contribute to a more sustainable and environmentally friendly lifestyle. Start with manageable steps, and over time, you can make a significant positive impact on the environment.
 
-</p>
-
-
 </div>
 
-        <h3> Cleanups near me </h3>
-        <iframe
-        src='//www.epa.gov/sites/production/files/widgets/ef-cleanups.html'
-        id="cleanups"
-        width="225"
-        height="250"
-        scrolling="no"
-        frameborder="0"
-        marginwidth="3"
-        marginheight="0">
-        </iframe>
 
 
-        <h3> Offsetting videos </h3> {/* maybe have them play at front? */}
+
+<h3> Cleanups near me </h3>
+<iframe
+src='//www.epa.gov/sites/production/files/widgets/ef-cleanups.html'
+id="cleanups"
+width="225"
+height="250"
+scrolling="no"
+frameborder="0"
+marginwidth="3"
+marginheight="0">
+</iframe>
+
+
+<h3> Offsetting videos </h3> {/* maybe have them play at front? */}
 
 
 
