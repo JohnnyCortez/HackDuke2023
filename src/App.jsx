@@ -48,9 +48,10 @@ function App() {
 
   return (
     <>
+    <body>
     <h1>Eco Start</h1>
-
     <ul className="navbar-list">
+      <li id = "home-logo"><img src = "https://e7.pngegg.com/pngimages/964/395/png-clipart-natural-environment-graphics-environmental-science-natural-environment-globe-logo.png"></img>EcoStart</li>
       <li><a href="/">Home</a></li>
       <li><a href="/news">News</a></li>
       <li><a href="/information">Information</a></li>
@@ -65,19 +66,8 @@ function App() {
           <li><a href="/createAccount">Create Account</a></li>
         </>
       )}
-    <body>
-
-
-    <ul className = "navbar-list">
-      <li id = "home-logo"><img src = "https://e7.pngegg.com/pngimages/964/395/png-clipart-natural-environment-graphics-environmental-science-natural-environment-globe-logo.png"></img>EcoStart</li>
-      <li><a href = "/" >Home</a></li>
-      <li><a href = "/news" >News</a></li>
-      <li><a href = "/information" >Information</a></li>
-      <li><a href = "/getInvolved" >Get Involved</a></li>
-      <li><a href = "/discussion" >Discussion</a></li>
-      <li><a href = "/signIn" >Sign In</a></li>
-      <li><a href = "/createAccount" >Create Account</a></li>
-    </ul>
+      </ul>
+    </body>
   <Routes>
     <Route exact path="/account" element={<Account />} />
     <Route exact path="/discussion" element={<Discussion />} />
