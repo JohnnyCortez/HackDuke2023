@@ -22,6 +22,7 @@ function App() {
       <li><a href = "/getInvolved" >Get Involved</a></li>
       <li><a href = "/discussion" >Discussion</a></li>
       <li><a href = "/signIn" >Sign In</a></li>
+      <li><a href = "/createAccount" >Create Account</a></li>
     </ul>
      <Routes>
         <Route exact path = "/account" element = {<Account/>} />
