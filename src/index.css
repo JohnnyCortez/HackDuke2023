@@ -1,8 +1,15 @@
-/* Navbar.css */
+
+
+p {
+    font-size: 16px;
+}
 
 /* Style for the navigation list */
 body {
     background-color: #f4f3ef;
+    font-family: 'EB Garamond', serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 ul.navbar-list {
     list-style-type: none;
@@ -26,8 +33,6 @@ ul.navbar-list {
     color: #fff; /* Text color for links */
     font-weight: bold;
     transition: color 0.3s; /* Smooth color transition on hover */
-    font-family: 'EB Garamond', serif;
-    font-family: 'Montserrat', sans-serif;
     font-family: 'Open Sans', sans-serif;
     font-weight: lighter;
     color: #45503b;
@@ -53,3 +58,36 @@ width: 100%;
     text-align: left;
 
 }
+
+
+
+.information-reduce h2{
+    padding: 7% 0 8% 0;
+    font-size: 300%;
+    color: #083D77;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.carbon-footprint-container{
+    display: flex; /* Use flexbox to control the layout */
+    align-items: center; /* Vertically center the content */
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .carbon-footprint-container p {
+    flex: 1; /* Allow the paragraph to grow and shrink as needed */
+    align-items: center;
+    margin-right: 0%; /* Create spacing between text and image */
+    font-size: 150%;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+  }
+  
+  .carbon-footprint-container img {
+    align-items: right;
+    max-width: 75%; /* Ensure the image does not exceed the container width */
+    width: 75%;
+    padding: 0% 0 0 25%;
+  }
