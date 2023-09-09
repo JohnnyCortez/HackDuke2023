@@ -1,92 +1,97 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { supabase } from '../client';
 
 function CreatePost() {
   const [text, setText] = useState('');
-  const [selectedFile, setSelectedFile] = useState(null);
+  const [subject, setSubject] = useState('');
+  const [imageFile, setImageFile] = useState(null);
   const [user, setUser] = useState(null);
 
-  async function verify() {
-    const { data } = await supabase.auth.getSession();
-    return data;
-  }
-
-  async function logData() {
-    try {
-      const data = await verify();
-      setUser(data);
-    } catch (error) {
-      console.error('Error:', error.message);
-    }
-  }
-
   useEffect(() => {
+    async function verify() {
+        const { data } = await supabase.auth.getSession();
+        return data;
+      }
+    
+      async function logData() {
+        try {
+          const data = await verify();
+          setUser(data);
+        } catch (error) {
+          console.error('Error:', error.message);
+        }
+    }
     logData();
   }, []);
 
-  console.log(user)
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  const handleFileChange = (e) => {
-    setSelectedFile(e.target.files[0]);
-  };
-
-  const handlePostCreate = async () => {
-    if (!text) {
-      alert('Please enter some text for your post.');
+    // Check if both text and an image are provided
+    if (!text || !imageFile) {
+      alert('Please enter text and select an image');
       return;
     }
 
-    if (selectedFile) {
-      // Generate a unique filename for the uploaded image
-      const fileName = `${Date.now()}_${selectedFile.name}`;
+    // Upload the image to Supabase storage
+    const { data, error } = await supabase.storage
+      .from('posts')
+      .upload(imageFile.name, imageFile);
 
-      // Upload the image to Supabase Storage in the "posts" bucket
-      const { data, error } = await supabase.storage
-        .from('posts')
-        .upload(fileName, selectedFile);
-
-      if (error) {
-        console.error('Error uploading image:', error.message);
-        return;
-      }
-
-      // The URL of the uploaded image
-      const imageUrl = data.Key;
-
-      // Create a new post with text, authorEmail, and the image URL
-      const { data: newPost, error: postError } = await supabase
-        .from('posts')
-        .insert([
-          {
-            authorEmail: user?.session.user.email,
-            text: text,
-            image_url: imageUrl, // Store the image URL
-          },
-        ])
-        .single();
-
-      if (postError) {
-        console.error('Error creating post:', postError.message);
-      } else {
-        console.log('Post created successfully:', newPost);
-        // Clear the form after successful post creation
-        setText('');
-        setSelectedFile(null);
-      }
+    if (error) {
+      console.error('Error uploading image:', error.message);
+      return;
     }
+
+    // Insert the post into the "posts" table
+    const { data: postData, postError } = await supabase.from('posts').insert([
+      {
+        authorEmail:  user?.session.user.email, 
+        text: text,
+        subject: subject,
+        imageUrl: imageFile.name,
+      },
+    ]);
+
+    if (postError) {
+      console.error('Error inserting post:', postError.message);
+      return;
+    }
+
+    // Clear form inputs
+    setText('');
+    setSubject('');
+    setImageFile(null);
+
+    // Optionally, you can notify the user that the post was successfully created
+    alert('Post created successfully!');
   };
 
   return (
-    <div>
-      <h2>Create Post</h2>
-      <textarea
-        placeholder="Write your post..."
-        value={text}
-        onChange={(e) => setText(e.target.value)}
-      />
-      <input type="file" accept="image/*" onChange={handleFileChange} />
-      <button onClick={handlePostCreate}>Create Post</button>
-    </div>
+    <form onSubmit={handleSubmit}>
+        <label>Subject:</label>
+        <input
+          type="text"
+          name="subject"
+          value={subject}
+          onChange={(e) => setSubject(e.target.value)}
+        />
+        <label>Text:</label>
+        <input
+          type="text"
+          name="text"
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+        />
+        <label>Image:</label>
+        <input
+          type="file"
+          name="image"
+          accept="image/*"
+          onChange={(e) => setImageFile(e.target.files[0])}
+        />
+        <button type="submit">Create Post</button>
+    </form>
   );
 }
 

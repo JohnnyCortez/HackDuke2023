@@ -69,7 +69,10 @@ function App() {
       )}
       </ul>
       {user ? (
+        <>
         <p>Welcome {user}</p>
+        <br/>
+        </>
       ) : (
         ""
       )}
