@@ -1,82 +1,70 @@
 
 
+/* Default styles for all screen sizes */
 p {
     font-size: 16px;
-}
+  }
 
-/* Style for the navigation list */
-body {
+  body {
     background-color: #f4f3ef;
     font-family: 'EB Garamond', serif;
     font-family: 'Montserrat', sans-serif;
     font-family: 'Open Sans', sans-serif;
-}
-ul.navbar-list {
+  }
+
+  ul.navbar-list {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    /* Background color for the navbar */
     display: flex;
-
-
   }
 
-  /* Style for each navigation item (list item) */
   ul.navbar-list li {
-    padding: 10px 20px; /* Adjust padding as needed */
-
+    padding: 10px 20px;
   }
 
-  /* Style for the navigation links (anchors) */
   ul.navbar-list li a {
-    text-decoration: none; /* Remove underlines from links */
-    color: #fff; /* Text color for links */
+    text-decoration: none;
+    color: #fff;
     font-weight: bold;
-    transition: color 0.3s; /* Smooth color transition on hover */
+    transition: color 0.3s;
     font-family: 'Open Sans', sans-serif;
     font-weight: lighter;
     color: #45503b;
     font-size: 200%;
   }
+
   #home-logo {
-    display: flex; /* Use flexbox to align items horizontally */
-    align-items: center; /* Vertically center the items (optional) */
+    display: flex;
+    align-items: center;
     font-size: 200%;
     font-weight: bold;
-    transition: color 0.3s; /* Smooth color transition on hover */
+    transition: color 0.3s;
     font-family: 'EB Garamond', serif;
     font-family: 'Montserrat', sans-serif;
     font-family: 'Open Sans', sans-serif;
     font-weight: lighter;
     color: #45503b;
-
   }
 
-#home-logo img {
+  #home-logo img {
     width: 100px;
     height: auto;
     margin-top: -10px;
+  }
 
-}
-  /* Change link color on hover */
   ul.navbar-list li a:hover {
-    color: #00bcd4; /* Hover color for links */
-  }
-/* styles.css */
-.banner-image {
-
-
-
-width: 100%;
-margin-right: 70px;
-  height: 200%;
-
-  background-color: purple;
-
-
+    color: #00bcd4;
   }
 
-.getInvolvedImageText {
+  .banner-image {
+    width: 100%;
+    margin-right: 70px;
+    height: 200%;
+    background-color: purple;
+  }
+
+  .getInvolvedImageText {
     width: 45%;
     font-size: 120%;
     font-family: 'EB Garamond', serif;
@@ -84,294 +72,87 @@ margin-right: 70px;
     font-family: 'Open Sans', sans-serif;
     font-weight: lighter;
     display: flex;
+  }
 
-}
-
-.information-reduce {
+  .information-reduce {
     text-align: left;
-}
-    .information-reduce h2{
-        padding: 7% 0 5% 0;
-        font-size: 250%;
-        text-align: left;
-        font-family: 'Montserrat', sans-serif;
-    }
-    .carbon-footprint-container{
-        display: flex; /* Use flexbox to control the layout */
-        align-items: center; /* Vertically center the content */
-        font-family: 'Open Sans', sans-serif;
-    }
-        .carbon-footprint-container p {
-        /* flex: 1; /* Allow the paragraph to grow and shrink as needed */
-            align-items: left;
-            font-size: 0%;
-            width: 50%;
-            margin-right: 0%;
-            font-family: 'Open Sans', sans-serif;
-            font-weight: lighter;
-        }
-        .carbon-footprint-container img {
-            display: flex;
-            align-items: right;
-        /*  max-width: 80%; /* Ensure the image does not exceed the container width */
-            width: 100%;
-            margin-left: 10%;
-            /* padding: 0% 0 0 25%; */
-        }
+  }
 
-.information-reduce p {
+  .information-reduce h2 {
+    padding: 7% 0 5% 0;
+    font-size: 250%;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .carbon-footprint-container {
+    display: flex;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .carbon-footprint-container p {
+    font-size: 0%; /* Initially hide the paragraph */
+    width: 50%;
+    margin-right: 0%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+  }
+
+  .carbon-footprint-container img {
+    width: 100%;
+    margin-left: 10%;
+  }
+
+  .information-reduce p {
     font-size: 150%;
-}
+  }
 
-.general p {
+  .general p {
     align-items: left;
     margin: 10% 0 0 0%;
     font-family: 'Open Sans', sans-serif;
     font-weight: lighter;
     line-height: 2.0;
-}
+  }
 
-.information-reduce h3{
+  .information-reduce h3 {
     padding: 7% 0 0 0;
     font-size: 200%;
     text-align: left;
     font-family: 'Montserrat', sans-serif;
-}
-/* styles.css */
-.rectangle {
-    width: 50%; /* Adjust the width as needed */
-    height: 400px; /* Adjust the height as needed */
-    background-color: #ace894; /* Rectangle background color */
-    border: 2px solid #45503b; /* Rectangle border */
-    border-radius: 10px;
-    margin-left: auto;
-    display: flex;
-    margin-top: -180px;
+  }
 
-}
-.rectangle #pledge {
-    display: flex;
-    font-family: 'EB Garamond', serif;
-    font-family: 'Montserrat', sans-serif;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: lighter;
-    font-size: 25px;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    margin-left: 250px;
-    margin-bottom: auto;
-}
-.rectangle #pledge-description {
-    display: flex;
-    font-family: 'EB Garamond', serif;
-    font-family: 'Montserrat', sans-serif;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: lighter;
-    font-size: 15px;
-
-    width: 45%;
-    margin-top: 120px;
-    margin-right: 100px;
-    margin-left: -200px;
-
-
-}
-
-.banner-image {
-    border: 2px solid #45503b;
-}
-
-.dropDown {
-
-    position: relative;
-    top: 580px;
-    right: 450px;
-
-}
-
-.orgBar {
-    position: relative;
-    top: 600px;
-    right: 300px;
-}
-
-.information-reduce ul {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: lighter;
-    line-height: 1.8;
-}
-.information-reduce ul li{
-    font-size: 130%;
-    margin-right: 0%;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: lighter;
-    line-height: 2.3;
-}
+  /* Responsive styles for smaller screens (less than 768px) */
+  @media (max-width: 768px) {
+    /* Adjust styles for smaller screens here */
     .info-body-container {
-        display: flex;
-        align-items: center;
+      flex-direction: column;
     }
-    .info-body-container ul {
-        width: 100%;
-    }
-    .intext-pic-container {
-        display: flex;
-        width: 100%;
-        flex: 2;
-        line-height:1.7;
-    }
-    .intext-pic-container ul {
-        margin: 3% 0 0 3%;
-        width: 100%;
-        flex: 2;
-    }
-    .intext-pic-container img{
-        width: 50%;
-    }
-.plant p{
-    align-items: center;
-    margin: 10% 50% 10% 50%;
-    font-size: 300%;
-}
 
-  .home-image {
+    .intext-pic-container img {
+      width: 100%;
+    }
 
-    display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  height: 80vh; /* Optional: Center within the viewport's height */
-  filter: brightness(1);
-  font-size: 120%;
-    font-family: 'EB Garamond', serif;
-    font-family: 'Montserrat', sans-serif;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: lighter;
-    display: flex;
-
+    .plant p {
+      margin: 10% 10% 10% 10%;
+      font-size: 200%;
+    }
   }
 
-  .home-text {
-    font-size: 120%;
-    font-family: 'EB Garamond', serif;
-    font-family: 'Montserrat', sans-serif;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: lighter;
-    display: flex;
+  /* Responsive styles for even smaller screens (less than 480px) */
+  @media (max-width: 480px) {
+    /* Adjust styles for even smaller screens here */
+    .plant p {
+      font-size: 150%;
+    }
 
+    .mission-info {
+      font-size: 100%;
+    }
+
+    .rectangle {
+      width: 100%;
+      margin-left: 0;
+    }
   }
-/*
-  .navigate-left {
-    display: flex;
-  }
-
-  .navigate-right {
-    display: flex;
-  } */
-  .button-container {
-    position: relative;
-    display: flex;
-    justify-content: space-between; /* Spread the buttons to opposite ends */
-    align-items: center; /* Vertically center align the buttons */
-    width: 100%; /* Ensure the container spans the full width of the parent */
-    top:-2500px;
-
-  }
-
-    .info-body-container {
-        display: flex;
-        align-items: center;
-    }
-    .info-body-container ul {
-        width: 100%;
-    }
-    .intext-pic-container {
-        display: flex;
-        width: 100%;
-        flex: 2;
-        line-height:1.7;
-    }
-    .intext-pic-container ul {
-        margin: 3% 0 0 3%;
-        width: 100%;
-        flex: 2;
-    }
-    .intext-pic-container img{
-        width: 50%;
-    }
-.plant p{
-    align-items: center;
-    margin: 10% 50% 10% 50%;
-    font-size: 300%;
-}
-.background-container h1  {
-    font-size: 200%;
-    font-family: 'EB Garamond', serif;
-    font-family: 'Montserrat', sans-serif;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: lighter;
-    display: flex;
-    justify-content: center;
-    margin: 20% 0 0 0;
-
-    color: white;
-    height: 20vh;
-
-}
-
-.gif-container {
-    max-width: 200%; /* Adjust the width as needed */
-    max-height: 100%;
-    justify-content: center;
-
-    /* Add other background properties as needed */
-
-  }
-
-  .mission-info {
-    color:white;
-
-
-}
-
-.mission-title{
-
-}
-
-
-/* Style for the dropdown menu container */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Style for the "Sign In" link */
-.dropdown a {
-  color: #333;
-  text-decoration: none;
-  padding: 10px;
-  display: block;
-}
-
-/* Style for the dropdown menu */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Style for the "Create Account" link inside the dropdown menu */
-.dropdown-content a {
-  color: #333;
-  padding: 10px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Style for the dropdown menu when hovering over the parent element */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
+ 
