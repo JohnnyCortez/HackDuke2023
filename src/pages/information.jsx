@@ -101,11 +101,11 @@ Reducing your carbon footprint is a gradual process that involves making sustain
 </p>
 </div>
 
-<div class = "plant">
+{/* <div class = "plant">
     <p>
     🌱
     </p>
-</div>
+</div> */}
 
 
 

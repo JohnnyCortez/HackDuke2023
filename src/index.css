@@ -120,6 +120,125 @@ p {
     font-size: 200%;
     text-align: left;
     font-family: 'Montserrat', sans-serif;
+}
+/* styles.css */
+.rectangle {
+    width: 50%; /* Adjust the width as needed */
+    height: 400px; /* Adjust the height as needed */
+    background-color: #ace894; /* Rectangle background color */
+    border: 2px solid #45503b; /* Rectangle border */
+    border-radius: 10px;
+    margin-left: auto;
+    display: flex;
+    margin-top: -180px;
+
+}
+.rectangle #pledge {
+    display: flex;
+    font-family: 'EB Garamond', serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+    font-size: 25px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-left: 250px;
+    margin-bottom: auto;
+}
+.rectangle #pledge-description {
+    display: flex;
+    font-family: 'EB Garamond', serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+    font-size: 15px;
+
+    width: 45%;
+    margin-top: 120px;
+    margin-right: 100px;
+    margin-left: -200px;
+
+
+}
+
+.banner-image {
+    border: 2px solid #45503b;
+}
+
+.dropDown {
+
+    position: relative;
+    top: 580px;
+    right: 450px;
+
+}
+
+.orgBar {
+    position: relative;
+    top: 600px;
+    right: 300px;
+}
+
+.information-reduce ul {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+    line-height: 1.8;
+}
+.information-reduce ul li{
+    font-size: 130%;
+    margin-right: 0%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+    line-height: 2.3;
+}
+    .info-body-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .info-body-container ul {
+        width: 100%;
+    }
+
+    .intext-pic-container img{
+        width: 50%;
+    }
+
+    .intext-pic-container ul {
+        margin: 3% 0 0 3%;
+        width: 100%;
+        flex: 2;
+    }
+    
+    .intext-pic-container {
+        display: flex;
+        width: 100%;
+        flex: 2;
+        line-height:1.7;
+    }
+
+
+.plant p{
+    align-items: center;
+    margin: 10% 50% 10% 50%;
+    font-size: 300%;
+}
+
+  .home-image {
+
+    display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 80vh; /* Optional: Center within the viewport's height */
+  filter: brightness(1);
+  font-size: 120%;
+    font-family: 'EB Garamond', serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+    display: flex;
+
   }
 
   /* Responsive styles for smaller screens (less than 768px) */
@@ -169,6 +288,14 @@ p {
     justify-content: space-between; /* Spread the buttons to opposite ends */
     align-items: center; /* Vertically center align the buttons */
     width: 100%; /* Ensure the container spans the full width of the parent */
+    top:-395px;
+    color: #45503b;
+    line-height: 2.3;
+}
+
+.mission-image {
+    position: relative;
+    top: -90px;
     top:-2500px;
 
   }
@@ -264,6 +391,96 @@ p {
   display: block;
 }
 
+/* for 1 news  */
+/* .news-container {
+    display: flex;
+    align-items:left;
+    text-align: left;
+    width: 100%;
+    flex: 2;
+    line-height:1.7;
+} */
+
+/* for all the news */ 
+/* #api-news {
+    display: block; 
+    align-items: left;
+    margin: 5% 0 0 5%;
+} */
+
+#api-news h2{
+padding: 7% 0 5% 0;
+font-size: 250%;
+text-align: left;
+font-family: 'Montserrat', sans-serif;
+}
+
+/* .news-container ol {
+    width: 100%;
+    flex: 2;
+    font-size: 200%;
+    margin: 0;
+    padding: 0;
+} */
+
+/* .news-container {
+    display: flex;
+    width: 100%;
+    flex: 2;
+    line-height:1.7;
+}
+
+.news-container img{
+    width: 50%;
+}
+
+.news-container h3 {
+    display: flex;
+    margin: 3% 0 0 3%;
+    width: 50%;
+    flex: 2;
+}
+
+.news-container p {
+    margin: 3% 0 0 3%;
+    width: 100%;
+    flex: 2;
+}
+
+.news-container {
+    display: flex;
+    align-items: center;
+  } */
+
+  /* Style for the ordered list */
+  .news-container ol {
+    list-style-type: decimal;
+    padding: 0; /* Remove default padding */
+  }
+
+  /* Style for each list item */
+  .news-container li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Adjust spacing between list items */
+  }
+
+  /* Style for the image */
+  .news-container img {
+    max-width: 100%;
+    margin-right: 20px; /* Add space to the right of the image */
+  }
+
+  /* Style for the text content (heading and paragraphs) */
+  .news-container h3, .news-container p {
+    margin: 0; /* Remove default margin */
+  }
+
+  #api-news h6 {
+    font-size: 13px;
+  }
+
+  
 /* ------------------------------------------------------------------------------------------create post form */
 
 .createPostForm {
