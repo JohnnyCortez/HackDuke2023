@@ -268,9 +268,7 @@ p {
       font-size: 150%;
     }
 
-    .mission-info {
-      font-size: 100%;
-    }
+
 
     .rectangle {
       width: 100%;
@@ -361,13 +359,15 @@ p {
 
 
   .mission-info {
-    color:black;
+
     height: 0vh;
+    font-size: 25px;
 
 }
 
 .mission-title{
     height: -20px;
+    color: #45503b;
 }
 
 
@@ -460,7 +460,7 @@ font-family: 'Montserrat', sans-serif;
     text-align: justify;
     padding: 0 0 0 5%;
   }
-  
+
   .news-container p {
     margin: 0; /* Remove default margin */
     font-size: 150%;
@@ -533,5 +533,5 @@ font-family: 'Montserrat', sans-serif;
 .video-container {
     display: flex;
     justify-content: center;
-    margin-top: 120px;
+    margin-top: 150px;
 }
