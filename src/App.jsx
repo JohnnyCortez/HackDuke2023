@@ -64,7 +64,6 @@ function App() {
 
   return (
     <>
-      <body>
         <ul className="navbar-list">
           <li id="home-logo">
             <a href="/">Ecostart</a>
@@ -99,7 +98,7 @@ function App() {
         ) : (
           ''
         )}
-      </body>
+
       <Routes>
         <Route exact path="/account" element={<Account />} />
         <Route exact path="/discussion" element={<Discussion />} />
@@ -112,7 +111,7 @@ function App() {
         <Route exact path="/createPost" element={<CreatePost username={username} />} />
         <Route exact path="/" element={<Home />} />
       </Routes>
-    </>
+      </>
   );
 }
 

@@ -236,10 +236,29 @@ margin-right: 70px;
 }
 
   .home-image {
+
     display: flex;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
   height: 80vh; /* Optional: Center within the viewport's height */
+  filter: brightness(1);
+  font-size: 120%;
+    font-family: 'EB Garamond', serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+    display: flex;
+
+  }
+
+  .home-text {
+    font-size: 120%;
+    font-family: 'EB Garamond', serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+    display: flex;
+
   }
 /*
   .navigate-left {
@@ -255,10 +274,10 @@ margin-right: 70px;
     justify-content: space-between; /* Spread the buttons to opposite ends */
     align-items: center; /* Vertically center align the buttons */
     width: 100%; /* Ensure the container spans the full width of the parent */
-    top:-395px;
-    color: #45503b;
-    line-height: 2.3;
-}
+    top:-2500px;
+
+  }
+
     .info-body-container {
         display: flex;
         align-items: center;
@@ -285,12 +304,38 @@ margin-right: 70px;
     margin: 10% 50% 10% 50%;
     font-size: 300%;
 }
-
-.mission-image {
-    position: relative;
-    top: -90px;
+.background-container h1  {
+    font-size: 200%;
+    font-family: 'EB Garamond', serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
     display: flex;
     justify-content: center;
+    margin: 20% 0 0 0;
+
+    color: white;
+    height: 20vh;
+
+}
+
+.gif-container {
+    max-width: 200%; /* Adjust the width as needed */
+    max-height: 100%;
+    justify-content: center;
+
+    /* Add other background properties as needed */
+
+  }
+
+  .mission-info {
+    color:white;
+
+
+}
+
+.mission-title{
+
 }
 
 
