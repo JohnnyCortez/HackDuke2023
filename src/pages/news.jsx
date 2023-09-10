@@ -37,9 +37,10 @@ function News() {
 //         const url = article.url;
 //         const urlToImage = article.urlToImage;
 //         const publishedAt = article.publishedAt;
+//              const date = publishedAt.substring(0, 10);
 //         const words = article.content.split('');
 //         const first20Words = words.slice(0, 20).join(' ');
-//         const markup = `<li>${title}</li<li>${author}</li<li>${description}</li<li>${url}</li<li>${urlToImage}</li<li>${publishedAt}</li<li>${first20Words}</li`;
+//         const markup = `<li>${title}</li<li>${author}</li<li>${description}</li<li>${url}</li<li>${urlToImage}</li<li>${date}</li<li>${first20Words}</li`;
 //         document.querySelector('#api-news ul').insertAdjacentHTML('beforebegin', markup);
       
 //         console.log('Title:', title);
@@ -57,20 +58,33 @@ function News() {
     return (
         <>
     <body> 
-        <h2>News</h2>
         <div id="api-news">
-            <ul>
-            {/* temp */}
-            <li>
-                <h2>G20 laments war in Ukraine but avoids blaming Russia</h2> {/* title */}
-                <p> author : https://www.facebook.com/bbcnewsLeaders </p>
-                <p> description : meeting in Delhi issue an ambiguous statement on the conflict, drawing criticism from Kyiv. </p>
-                <p> url : "https://www.bbc.co.uk/news/world-asia-india-66763836" </p>
-                {/* <img src = "https://ichef.bbci.co.uk/news/1024/branded_news/B9B8/production/_131044574_gettyimages-1653679975.jpg" alt = "news1!"> </img> */}
-                <p> date published : 2023-09-09T15:58:25ZT </p>
-                <p> description : h e G 2 0 s u m m i t i n I n </p>
+        <h2>Weekly Environmental News 🗓️</h2>
+        
+            
+            <div class = "news-container">
+                
+                <ol>
+                <li>
+                    <a href="https://www.bbc.co.uk/news/world-asia-india-66763836">    
+                    <img src="https://ichef.bbci.co.uk/news/1024/branded_news/B9B8/production/_131044574_gettyimages-1653679975.jpg" alt = "news!"></img>
+                    </a>
+                    <div>
 
-            </li>
+                    <h3>G20 laments war in Ukraine but avoids blaming Russia</h3> {/* title */}
+                    <h6>2023-09-09</h6>
+                    <p>meeting in Delhi issue an ambiguous statement on the conflict, drawing criticism from Kyiv. </p>
+                    
+                    <p> description : h e G 2 0 s u m m i t i n I n </p>
+                    </div>
+
+
+
+                </li>
+                </ol>
+            </div>
+
+    
 
             <li> Lab-grown Meat is not a Climate Change SolutionChristoph PröschelIn this guest post, we investigate why lab-grown or cultivated meat should not be considered a solution to mitigating our livestock-based emissions.https://www.climatedrift.com/p/lab-grown-meat-is-not-a-climate-solutionhttps://substackcdn.com/image/fetch/w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb9ca0175-fdb0-4c5e-ab74-179f9fd4ea0d_6000x3150.jpeg2023-09-09T18:19:00ZW e l c o m e t o C l i m a t e D
 
@@ -93,7 +107,7 @@ function News() {
                 
             {/* temp */}
 
-            </ul>
+           
         </div>
     </body>
     </>
