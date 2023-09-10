@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { supabase } from '../client';
 
-function CreatePost() {
+function CreatePost(username) {
+    // console.log(username.username, "hello")
+
   const [text, setText] = useState('');
   const [subject, setSubject] = useState('');
+  const [links, setLinks] = useState('')
   const [imageFile, setImageFile] = useState(null);
   const [user, setUser] = useState(null);
+
 
   useEffect(() => {
     async function verify() {
@@ -56,9 +60,11 @@ function CreatePost() {
     const { data: postData, postError } = await supabase.from('posts').insert([
       {
         authorEmail: user?.session.user.email,
+        username: username.username,
         text: text,
         subject: subject,
         imageUrl: imageFile.name,
+        links: links,
       },
     ]);
 
@@ -70,6 +76,7 @@ function CreatePost() {
     // Clear form inputs
     setText('');
     setSubject('');
+    setLinks('');
     setImageFile(null);
 
     // Optionally, you can notify the user that the post was successfully created
@@ -98,6 +105,13 @@ function CreatePost() {
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
+      <label>Relavent Links:</label>
+      <input
+        type="text"
+        name="links"
+        value={links}
+        onChange={(e) => setLinks(e.target.value)}
+      />
       <label>Image:</label>
       <input
         type="file"
@@ -105,6 +119,7 @@ function CreatePost() {
         accept="image/*"
         onChange={(e) => setImageFile(e.target.files[0])}
       />
+      <br/>
       <button type="submit">Create Post</button>
     </form>
   );

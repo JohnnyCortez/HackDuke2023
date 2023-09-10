@@ -10,8 +10,7 @@ const Discussion = () => {
     async function fetchPosts() {
       const { data, error } = await supabase
         .from('posts')
-        .select('authorEmail, text, subject, imageUrl');
-
+        .select('authorEmail, text, subject, links, username, imageUrl');
       if (error) {
         console.error('Error fetching posts:', error);
       } else {
