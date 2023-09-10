@@ -17,6 +17,8 @@ p {
     margin: 0;
     padding: 0;
     display: flex;
+    align-items: center;
+
   }
 
   ul.navbar-list li {
@@ -32,6 +34,7 @@ p {
     font-weight: lighter;
     color: #45503b;
     font-size: 200%;
+
   }
 
   #home-logo {
@@ -210,7 +213,7 @@ p {
         width: 100%;
         flex: 2;
     }
-    
+
     .intext-pic-container {
         display: flex;
         width: 100%;
@@ -288,17 +291,31 @@ p {
     justify-content: space-between; /* Spread the buttons to opposite ends */
     align-items: center; /* Vertically center align the buttons */
     width: 100%; /* Ensure the container spans the full width of the parent */
-    top:-395px;
+    bottom: 20px; /* Default positioning for smaller screens */
     color: #45503b;
     line-height: 2.3;
 }
 
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    .button-container {
+        bottom: 850px; /* Adjust positioning for larger screens */
+    }
+}
+
+
 .mission-image {
     position: relative;
-    top: -90px;
-    top:-2500px;
+    top: -90px; /* Default positioning for smaller screens */
+}
 
-  }
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    .mission-image {
+        top: -2500px; /* Adjust positioning for larger screens */
+    }
+}
+
 
     .info-body-container {
         display: flex;
@@ -344,13 +361,13 @@ p {
 
 
   .mission-info {
-    color:white;
-
+    color:black;
+    height: 0vh;
 
 }
 
 .mission-title{
-
+    height: -20px;
 }
 
 
@@ -401,9 +418,15 @@ p {
     line-height:1.7;
 } */
 
+<<<<<<< HEAD
 /* for all the news */ 
 #api-news {
     display: block; 
+=======
+/* for all the news */
+/* #api-news {
+    display: block;
+>>>>>>> f3cbb3585157ceae7f706aae9a61734eb012b82b
     align-items: left;
     margin: 5% 0 0 5%;
 }
@@ -457,69 +480,64 @@ font-family: 'Montserrat', sans-serif;
     text-align: justify;
   }
 
-  
+
 /* ------------------------------------------------------------------------------------------create post form */
 
-.createPostForm {
-  box-sizing: border-box;
+.form {
+  max-width: 500px; /* Adjust the max-width for a wider form */
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #0B4A0A;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-top: 15px;
 }
 
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
+/* Style for labels */
+.form label {
+  display: block;
+  margin-bottom: 8px;
+  color: white;
+}
+
+.formH2{
+  color:white
+}
+
+/* Style for text inputs */
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="password"],
+.form input[type="number"],
+.form textarea {
+  width: 75%;
+  padding: 10px;
+  margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  resize: vertical;
+  font-size: 16px;
 }
 
-label {
-  padding: 12px 12px 12px 0;
-  display: inline-block;
-}
-
-input[type=submit] {
-  background-color: #04AA6D;
-  color: white;
-  padding: 12px 20px;
+/* Style for the Submit button */
+.form button {
+  background-color: #88BD7F;
+  color: #fff;
+  padding: 10px 20px;
   border: none;
   border-radius: 4px;
+  font-size: 18px;
   cursor: pointer;
-  float: right;
 }
 
-input[type=submit]:hover {
-  background-color: #45a049;
+/* Style for the confirmation message */
+.confirm-message {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 20px;
 }
 
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-}
-
-.col-25 {
-  float: left;
-  width: 25%;
-  margin-top: 6px;
-}
-
-.col-75 {
-  float: left;
-  width: 75%;
-  margin-top: 6px;
-}
-
-/* Clear floats after the columns */
-.row::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .col-25, .col-75, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
-  }
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
 }

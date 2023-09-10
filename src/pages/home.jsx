@@ -6,7 +6,7 @@ import { IconButton } from '@mui/material';
 function Home() {
 
     const images = [
-        'https://www.youtube.com/embed/mULqSzpk_d4?autoplay=1',
+        'https://i0.wp.com/post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/04/iStock-149046398-1024x586.jpg?w=1155&h=2748',
         'https://cms.iqair.com/sites/default/files/blog/2021-01/CostofAir21_Desk_a.jpg', // Replace with your actual URL
         'https://www.pewtrusts.org/-/media/post-launch-images/2022/09/gettyimages1140387268jpgmaster/16x9_m.jpg', // Replace with your actual URL
       ];
@@ -38,16 +38,11 @@ function Home() {
             style={{ width: '100%', border: '4px solid #45503b' }} // Adjust the width as needed
           />
         ) : currentImageIndex === 0 ? (
-        <iframe
+            <img
             src={images[currentImageIndex]}
-            title={`Video ${currentImageIndex + 1}`}
-            width="100%" // Adjust the width as needed
-            height="700" // Adjust the height as needed
-            frameBorder="0"
-            allowFullScreen
-            autoPlay
-            style={{ border: '4px solid #45503b' }}
-        ></iframe>
+            alt={`Image ${currentImageIndex + 1}`}
+            style={{ width: '110%', border: '4px solid #45503b', marginTop: '30px' }} // Adjust the width as needed
+          />
         ) : currentImageIndex === 1 ? (
           <img
           src={images[currentImageIndex]}
@@ -64,7 +59,17 @@ function Home() {
       </div>
         <h1 className = "mission-title" >Our Mission</h1>
         <p className = "mission-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
+        <div className="video-container">
+      {/* Paste your YouTube embed code here */}
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/mULqSzpk_d4"
+        title="Embedded Video"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+    </div>
           <div className="button-container">
             <IconButton onClick={handlePreviousClick}>
               <NavigateBeforeIcon style={{ fontSize: '80', color: 'white', backgroundColor: 'transparent' }} />
