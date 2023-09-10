@@ -66,7 +66,7 @@ function App() {
     <>
         <ul className="navbar-list">
           <li id="home-logo">
-            <a href="/">Ecostart</a>
+            <a href="/">EcoStart</a>
             <img src="https://e7.pngegg.com/pngimages/964/395/png-clipart-natural-environment-graphics-environmental-science-natural-environment-globe-logo.png" alt="Logo" />
           </li>
           <li><a href="/news">News</a></li>
@@ -92,7 +92,7 @@ function App() {
         </ul>
         {user ? (
           <>
-            <p>Welcome {username}</p>
+            <p>Welcome, {username}!</p>
             <br />
           </>
         ) : (
