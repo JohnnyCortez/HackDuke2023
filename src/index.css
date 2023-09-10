@@ -14,7 +14,9 @@ p {
 
   ul.navbar-list {
     list-style-type: none;
-    margin: 0;
+    margin-top: -40px;
+    margin-left: -40px;
+    margin-right: -40px;
     padding: 0;
     display: flex;
     align-items: center;
@@ -33,7 +35,7 @@ p {
     transition: color 0.3s;
     font-family: 'Open Sans', sans-serif;
     font-weight: lighter;
-    color: #45503b;
+    color: white;
     font-size: 200%;
 
   }
@@ -58,7 +60,8 @@ p {
   }
 
   ul.navbar-list li a:hover {
-    color: #00bcd4;
+    text-decoration: underline;
+    
   }
 
   .banner-image {
@@ -628,7 +631,7 @@ font-family: 'Montserrat', sans-serif;
 
 /* Style for the post link */
 .post-link {
-  color: #007BFF;
+  /* color: #007BFF; */
   text-decoration: none;
   font-size: 16px;
   display: block;
