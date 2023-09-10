@@ -490,6 +490,7 @@ font-family: 'Montserrat', sans-serif;
   background-color: #0B4A0A;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-top: 15px;
 }
 
 /* Style for labels */
@@ -509,7 +510,7 @@ font-family: 'Montserrat', sans-serif;
 .form input[type="password"],
 .form input[type="number"],
 .form textarea {
-  width: 100%;
+  width: 75%;
   padding: 10px;
   margin-bottom: 20px;
   border: 1px solid #ccc;
@@ -519,7 +520,7 @@ font-family: 'Montserrat', sans-serif;
 
 /* Style for the Submit button */
 .form button {
-  background-color: #007BFF;
+  background-color: #88BD7F;
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -530,7 +531,6 @@ font-family: 'Montserrat', sans-serif;
 
 /* Style for the confirmation message */
 .confirm-message {
-  color: #007BFF;
   font-size: 18px;
   text-align: center;
   margin-top: 20px;
