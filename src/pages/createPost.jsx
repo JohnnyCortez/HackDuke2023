@@ -60,7 +60,7 @@ function CreatePost(username) {
     const { data: postData, postError } = await supabase.from('posts').insert([
       {
         authorEmail: user?.session.user.email,
-        username: username.username,
+        username: username?.username,
         text: text,
         subject: subject,
         imageUrl: imageFile.name,
@@ -84,7 +84,7 @@ function CreatePost(username) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form class="form" onSubmit={handleSubmit}>
       <label>Subject:</label>
       <input
         type="text"
@@ -114,6 +114,7 @@ function CreatePost(username) {
       />
       <label>Image:</label>
       <input
+        class="uploadImg"
         type="file"
         name="image"
         accept="image/*"

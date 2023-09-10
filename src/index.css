@@ -514,6 +514,11 @@ font-family: 'Montserrat', sans-serif;
   margin-top: 30px;
 }
 
+.uploadImg {
+  margin-bottom: 20px;
+  color: white;
+}
+
 /* Style for labels */
 .form label {
   display: block;
@@ -670,5 +675,23 @@ button.create-post-button:hover {
 button.create-post-button a {
   text-decoration: none; /* Remove underlines */
   color: inherit; /* Inherit text color from the button */
+}
+
+/* --------------------------------------------------------------------------------------filter */
+/* CSS for the filter button */
+.filter-button {
+  border-radius: 4px; /* Add rounded corners */
+  padding: 10px 15px; /* Add padding to the button */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Change cursor on hover */
+}
+
+.Discussionfilter {
+  margin-left: 15px;
+}
+
+.formButtons{
+  text-align: left;
+  padding: 20px;
 }
 
