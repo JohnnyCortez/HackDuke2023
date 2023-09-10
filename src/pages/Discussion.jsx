@@ -32,9 +32,11 @@ const Discussion = (username) => {
     <div>
       <h1>Environmental Posts</h1>
       {username.username === null ? "" : <button><Link to="/createPost">Create Post!</Link></button>}
+      <div class="post-container">
       {posts.map((post, index) => (
         <Post key={index} {...post} />
       ))}
+      </div>
     </div>
   );
 };
