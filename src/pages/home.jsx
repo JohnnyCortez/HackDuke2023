@@ -35,19 +35,19 @@ function Home() {
           <img
             src={images[currentImageIndex]}
             alt={`Image ${currentImageIndex + 1}`}
-            style={{ width: '100%', border: '4px solid #45503b' }} // Adjust the width as needed
+            style={{ width: '100%', border: '4px solid #45503b', filter: 'brightness(0.5)' }} // Adjust the width as needed
           />
         ) : currentImageIndex === 0 ? (
             <img
             src={images[currentImageIndex]}
             alt={`Image ${currentImageIndex + 1}`}
-            style={{ width: '110%', border: '4px solid #45503b', marginTop: '30px' }} // Adjust the width as needed
+            style={{ width: '110%', border: '4px solid #45503b', marginTop: '30px', filter: 'brightness(0.5)' }} // Adjust the width as needed
           />
         ) : currentImageIndex === 1 ? (
           <img
           src={images[currentImageIndex]}
           alt={`Image ${currentImageIndex + 1}`}
-          style={{ width: '100%', border: '4px solid #45503b' }} // Adjust the width as needed
+          style={{ width: '100%', border: '4px solid #45503b', filter: 'brightness(0.5)' }} // Adjust the width as needed
 
           />
         )
