@@ -6,6 +6,7 @@ function News() {
     // climateORenvironmentORpollutionORfireORwaterORenergy
 //
 
+
     fetch('https://newsapi.org/v2/everything?q=climate&q=environment&from=2023-09-09&to=2023-09-09&sortBy=relevancyANDpopularity&apiKey=46ab106b4b0749b78c5899d83e96dff5',{
     method: 'GET',
     headers: {
@@ -22,51 +23,47 @@ function News() {
         return res.json(); // Parse JSON data
       })
     .then(newsdata => {
-        //articles 
-        console.log(newsdata);
+        document.querySelector('#api-news').innerHTML = '';
         if (!newsdata.articles) {
             throw new Error ("Error: No articles found in the data.");
         }
         const articles = newsdata.articles;
-        document.querySelector('#api-news').innerHTML = '';
-        
-        for (let i = 0; i < 10 && i < articles.length; i++) {
-        const article = articles[i];
-        const title = article.title;
-        const description = article.description;
-        const url = article.url;
-        const urlToImage = article.urlToImage;
-        const publishedAt = article.publishedAt;
-             const date = publishedAt.substring(0, 10);
-        const words = article.content.split(' ');
-        const first20Words = words.slice(0, 20).join(' ');
 
-        const markup = `
-        <div class = "news-container">
-            <ol>
-                <li>
-                    <a href="${url}">    
-                        <img src="${urlToImage}" alt = "news!"></img>
-                    </a>
-                    <div>
-                    <h3>${title}</h3> 
-                    <h6>${date}</h6>
-                    <p>${description} </p>
-                    <p>${first20Words}</p>
-                    </div> 
-                </li>
-            </ol>
-        </div>
-        `
-        document.querySelector('#api-news').insertAdjacentHTML('afterend', markup);
+        for (let i = 0; i < 10 && i < articles.length; i++) {
+            const article = articles[i];
+            const title = article.title;
+            const description = article.description;
+            const url = article.url;
+            const urlToImage = article.urlToImage;
+            const publishedAt = article.publishedAt;
+                const date = publishedAt.substring(0, 10);
+            const words = article.content.split(' ');
+            const first20Words = words.slice(0, 20).join(' ');
+
+            const markup = `
+            <div class = "news-container">
+                <ol>
+                    <li>
+                        <a href="${url}">    
+                            <img src="${urlToImage}" alt = "news!"></img>
+                        </a>
+                        <div>
+                        <h3>${title}</h3> 
+                        <h6>${date}</h6>
+                        <p>${description} </p>
+                        <p>${first20Words}</p>
+                        </div> 
+                    </li>
+                </ol>
+            </div>
+            `
+            document.querySelector('#api-news').insertAdjacentHTML('afterend', markup);
       };
     })
     .catch(error => { // Handle errors
         console.error('Error:', error);
     })
-//
-
-    
+//  
     ;
 
     return (
@@ -74,29 +71,11 @@ function News() {
     <body> 
         <div id="news">
         <h2>Weekly Environmental News 🗓️</h2>
+        <p class = "subheading1">Updated every week.<br></br><br></br>An easy way to stay dedicated to sustainability.</p>
 
         <div id="api-news">
-
-            
-            {/* <div class = "news-container">
-                <ol>
-                <li>
-                    <a href="https://www.bbc.co.uk/news/world-asia-india-66763836">    
-                    <img src="https://ichef.bbci.co.uk/news/1024/branded_news/B9B8/production/_131044574_gettyimages-1653679975.jpg" alt = "news!"></img>
-                    </a>
-                    <div>
-
-                    <h3>TEST</h3> 
-                    <h6>2023-09-09</h6>
-                    <p>meeting in Delhi issue an ambiguous statement on the conflict, drawing criticism from Kyiv. </p>
-                    
-                    <p> description : h e G 2 0 s u m m i t i n I n </p>
-                    </div> 
-
-                </li>
-                </ol>
-            </div> */}
         </div>
+
         </div>
     </body>
     </>
