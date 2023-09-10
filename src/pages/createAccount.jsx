@@ -63,7 +63,7 @@ function CreateAccount() {
                     <input
                         type="email"
                         name="email"
-                        onChange={(e) => setEmail(e.target.value)}
+                        onChange={(e) => setEmail(e.target.value.toLowerCase())}
                     />
 
                     <label>Username:</label>
