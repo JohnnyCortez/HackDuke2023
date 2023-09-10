@@ -93,7 +93,6 @@ function App() {
         {user ? (
           <>
             <p className='leftSide'><span className='bold'>Currently Logged in as: </span>{username}</p>
-            <br />
           </>
         ) : (
           ''

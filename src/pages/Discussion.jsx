@@ -41,7 +41,9 @@ const Discussion = ({ username }) => {
 
   return (
     <div>
-      <h1>Environmental Posts</h1>
+    <div className='information-reduce'>
+      <h2>Environmental Posts 🌍</h2>
+    </div>
       <div className='formButtons'>
       {username === null ? '' : (
         <>
