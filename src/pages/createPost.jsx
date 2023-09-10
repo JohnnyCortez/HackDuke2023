@@ -1,28 +1,41 @@
 import React, { useEffect, useState } from 'react';
 import { supabase } from '../client';
 
-function CreatePost() {
+function CreatePost(username) {
+    // console.log(username.username, "hello")
+
   const [text, setText] = useState('');
   const [subject, setSubject] = useState('');
+  const [links, setLinks] = useState('')
   const [imageFile, setImageFile] = useState(null);
   const [user, setUser] = useState(null);
 
+
   useEffect(() => {
     async function verify() {
-        const { data } = await supabase.auth.getSession();
-        return data;
+      const { data } = await supabase.auth.getSession();
+      return data;
+    }
+
+    async function logData() {
+      try {
+        const data = await verify();
+        setUser(data);
+      } catch (error) {
+        console.error('Error:', error.message);
       }
-    
-      async function logData() {
-        try {
-          const data = await verify();
-          setUser(data);
-        } catch (error) {
-          console.error('Error:', error.message);
-        }
     }
     logData();
   }, []);
+
+  const subjectOptions = [
+    'Climate Change',
+    'Biodiversity Loss',
+    'Deforestation',
+    'Air Pollution',
+    'Ocean Pollution',
+    'Plastic Pollution',
+  ];
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -46,10 +59,12 @@ function CreatePost() {
     // Insert the post into the "posts" table
     const { data: postData, postError } = await supabase.from('posts').insert([
       {
-        authorEmail:  user?.session.user.email, 
+        authorEmail: user?.session.user.email,
+        username: username.username,
         text: text,
         subject: subject,
         imageUrl: imageFile.name,
+        links: links,
       },
     ]);
 
@@ -61,6 +76,7 @@ function CreatePost() {
     // Clear form inputs
     setText('');
     setSubject('');
+    setLinks('');
     setImageFile(null);
 
     // Optionally, you can notify the user that the post was successfully created
@@ -69,28 +85,42 @@ function CreatePost() {
 
   return (
     <form onSubmit={handleSubmit}>
-        <label>Subject:</label>
-        <input
-          type="text"
-          name="subject"
-          value={subject}
-          onChange={(e) => setSubject(e.target.value)}
-        />
-        <label>Text:</label>
-        <input
-          type="text"
-          name="text"
-          value={text}
-          onChange={(e) => setText(e.target.value)}
-        />
-        <label>Image:</label>
-        <input
-          type="file"
-          name="image"
-          accept="image/*"
-          onChange={(e) => setImageFile(e.target.files[0])}
-        />
-        <button type="submit">Create Post</button>
+      <label>Subject:</label>
+      <input
+        type="text"
+        name="subject"
+        list="subjectOptions"
+        value={subject}
+        onChange={(e) => setSubject(e.target.value)}
+      />
+      <datalist id="subjectOptions">
+        {subjectOptions.map((option) => (
+          <option key={option} value={option} />
+        ))}
+      </datalist>
+      <label>Text:</label>
+      <input
+        type="text"
+        name="text"
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+      />
+      <label>Relavent Links:</label>
+      <input
+        type="text"
+        name="links"
+        value={links}
+        onChange={(e) => setLinks(e.target.value)}
+      />
+      <label>Image:</label>
+      <input
+        type="file"
+        name="image"
+        accept="image/*"
+        onChange={(e) => setImageFile(e.target.files[0])}
+      />
+      <br/>
+      <button type="submit">Create Post</button>
     </form>
   );
 }
