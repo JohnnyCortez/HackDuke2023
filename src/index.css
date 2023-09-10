@@ -540,14 +540,27 @@ font-family: 'Montserrat', sans-serif;
 /* ------------------------------------------------------------------------------------------------discussion form */
 /* Style for the post container */
 /* Style for the post container */
+.post-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
 .post {
   background-color: #ffffff;
+  flex-wrap: wrap;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
-  margin: 20px auto; /* Center the posts and add space between them */
-  padding: 20px;
+  margin: 5px; /* Center the posts and add space between them */
+  padding: 15px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  max-width: 600px; /* Adjust the maximum width as needed */
+  width: 400px; /* Adjust the maximum width as needed */
+  height: 400px;
+  text-align: left;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 /* Style for the post title */
@@ -581,8 +594,10 @@ font-family: 'Montserrat', sans-serif;
 
 /* Style for the post image */
 .post-image {
-  max-width: 100%;
-  height: auto;
+  width: 100%; /* Make sure the image doesn't exceed its container's width */
+  max-height: 200px; /* Set a maximum height for uniformity (adjust as needed) */
+  width: auto;
+  height: auto; /* Allow the image to scale proportionally */
   display: block;
   margin: 10px auto; /* Center the image horizontally and add space around it */
 }
