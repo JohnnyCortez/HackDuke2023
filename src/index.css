@@ -24,11 +24,12 @@ p {
     display: flex;
     align-items: center;
     background-color: #8a857c;
-
+    border-radius: 10px;
   }
 
   ul.navbar-list li {
     padding: 10px 20px;
+
   }
 
   ul.navbar-list li a {
@@ -40,6 +41,7 @@ p {
     font-weight: lighter;
     color: white;
     font-size: 200%;
+
 
   }
 
@@ -60,6 +62,9 @@ p {
     width: 100px;
     height: auto;
     margin-top: -10px;
+    border-radius: 10px;
+    margin-left: 10px;
+    : #8a857c;
   }
 
   ul.navbar-list li a:hover {
@@ -429,7 +434,7 @@ p {
     line-height:1.7;
 } */
 
-/* for all the news */ 
+/* for all the news */
 #api-news {
     display: block; }
 /* for all the news */
@@ -449,8 +454,8 @@ font-family: 'Montserrat', sans-serif;
 
 .subheading1 {
     padding: 3% 0 10% 10%;
-    margin: -7%; 
-    text-align: left; 
+    margin: -7%;
+    text-align: left;
     font-size: 150%;
     font-family: 'Open Sans', sans-serif;
     font-weight: lighter;
