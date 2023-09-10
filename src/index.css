@@ -422,6 +422,9 @@ p {
     line-height:1.7;
 } */
 
+/* for all the news */ 
+#api-news {
+    display: block; }
 /* for all the news */
 /* #api-news {
     display: block;
@@ -429,11 +432,21 @@ p {
     margin: 5% 0 0 5%;
 }
 
-#api-news h2{
-padding: 7% 0 5% 0;
+#news h2{
+padding: 3% 0 5% 0;
 font-size: 250%;
 text-align: left;
 font-family: 'Montserrat', sans-serif;
+}
+
+.subheading1 {
+    padding: 3% 0 10% 10%;
+    margin: -7%; 
+    text-align: left; 
+    font-size: 150%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+
 }
 
 
@@ -467,16 +480,18 @@ font-family: 'Montserrat', sans-serif;
 
   .news-container p {
     margin: 0; /* Remove default margin */
-    font-size: 150%;
+    font-size: 120%;
     padding: 0 0 0 5%;
     text-align: justify;
   }
 
-  #news-container h6 {
+  .news-container h6 {
     padding: 0 0 0 5%;
     font-size: 25px;
     text-align: justify;
   }
+
+
 
 
 /* ------------------------------------------------------------------------------------------create post form */
