@@ -11,7 +11,7 @@ const Discussion = (username) => {
     async function fetchPosts() {
       const { data, error } = await supabase
         .from('posts')
-        .select('authorEmail, text, subject, links, username, imageUrl');
+        .select('authorEmail, text, subject, links, username, imageUrl, created_at');
       if (error) {
         console.error('Error fetching posts:', error);
       } else {
@@ -31,7 +31,7 @@ const Discussion = (username) => {
   return (
     <div>
       <h1>Environmental Posts</h1>
-      {username.username === null ? "" : <button><Link to="/createPost">Create Post!</Link></button>}
+      {username.username === null ? "" : <button className="create-post-button"><Link to="/createPost">Create Post!</Link></button>}
       <div class="post-container">
       {posts.map((post, index) => (
         <Post key={index} {...post} />

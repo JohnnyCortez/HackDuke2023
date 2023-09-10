@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Post = ({ authorEmail, username, text, subject, links, imageUrl }) => {
+const Post = ({ authorEmail, username, text, subject, links, imageUrl, created_at }) => {
   return (
     <div className="post">
       <h3 className="post-title">Subject: {subject}</h3>
@@ -12,10 +12,11 @@ const Post = ({ authorEmail, username, text, subject, links, imageUrl }) => {
           className="post-image"
         />
       )}
-      <p className="post-text">{text}</p>
+      <p className="post-textPrimary wrapForm">{text}</p>
       <span class = "bold">Links: </span><a href={links} className="post-link" target="_blank" rel="noopener noreferrer">
         {links}
       </a>
+      <p className="post-text"><span class = "bold">Posted: </span>{created_at.slice(0, 10)}</p>
     </div>
   );
 };

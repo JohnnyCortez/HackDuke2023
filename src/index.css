@@ -18,6 +18,7 @@ p {
     padding: 0;
     display: flex;
     align-items: center;
+    background-color: #8a857c;
 
   }
 
@@ -568,14 +569,14 @@ font-family: 'Montserrat', sans-serif;
 
 .post {
   background-color: #ffffff;
-  flex-wrap: wrap;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   margin: 5px; /* Center the posts and add space between them */
   padding: 15px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   width: 400px; /* Adjust the maximum width as needed */
-  height: 400px;
+  max-height: 1000px;
+  height: auto;
   text-align: left;
 }
 
@@ -603,6 +604,28 @@ font-family: 'Montserrat', sans-serif;
   margin-bottom: 10px;
 }
 
+.post-textPrimary {
+  font-size: 16px;
+  line-height: 1.5; /* Adjust as needed */
+  margin-bottom: 10px;
+  word-wrap: break-word; /* Allow long words to break and wrap */
+}
+
+/* .wrapForm {
+  width: 400px;
+  max-height: 200px;
+  height: auto;
+  text-align: left;
+  overflow: auto; /* Uncomment this line */
+ */
+
+.post-textPrimary {
+  /* ... */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 /* Style for the post link */
 .post-link {
   color: #007BFF;
@@ -621,3 +644,24 @@ font-family: 'Montserrat', sans-serif;
   display: block;
   margin: 10px auto; /* Center the image horizontally and add space around it */
 }
+
+button.create-post-button {
+  background-color: #050D50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+button.create-post-button:hover {
+  background-color: #9AB5D6;
+}
+
+button.create-post-button a {
+  text-decoration: none; /* Remove underlines */
+  color: inherit; /* Inherit text color from the button */
+}
+
