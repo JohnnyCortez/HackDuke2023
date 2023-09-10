@@ -92,7 +92,7 @@ function App() {
         </ul>
         {user ? (
           <>
-            <p>Welcome {username}</p>
+            <p>Welcome, {username}!</p>
             <br />
           </>
         ) : (
