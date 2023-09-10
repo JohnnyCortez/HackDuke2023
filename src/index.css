@@ -210,7 +210,7 @@ p {
         width: 100%;
         flex: 2;
     }
-    
+
     .intext-pic-container {
         display: flex;
         width: 100%;
@@ -288,17 +288,31 @@ p {
     justify-content: space-between; /* Spread the buttons to opposite ends */
     align-items: center; /* Vertically center align the buttons */
     width: 100%; /* Ensure the container spans the full width of the parent */
-    top:-395px;
+    bottom: 20px; /* Default positioning for smaller screens */
     color: #45503b;
     line-height: 2.3;
 }
 
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    .button-container {
+        bottom: 850px; /* Adjust positioning for larger screens */
+    }
+}
+
+
 .mission-image {
     position: relative;
-    top: -90px;
-    top:-2500px;
+    top: -90px; /* Default positioning for smaller screens */
+}
 
-  }
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    .mission-image {
+        top: -2500px; /* Adjust positioning for larger screens */
+    }
+}
+
 
     .info-body-container {
         display: flex;
@@ -345,12 +359,13 @@ p {
 
   .mission-info {
     color:black;
-
+    height: 0vh;
 
 }
 
 .mission-title{
-
+    height: -20px;
+    f
 }
 
 
@@ -401,9 +416,9 @@ p {
     line-height:1.7;
 } */
 
-/* for all the news */ 
+/* for all the news */
 /* #api-news {
-    display: block; 
+    display: block;
     align-items: left;
     margin: 5% 0 0 5%;
 } */
@@ -480,7 +495,7 @@ font-family: 'Montserrat', sans-serif;
     font-size: 13px;
   }
 
-  
+
 /* ------------------------------------------------------------------------------------------create post form */
 
 .createPostForm {
@@ -545,4 +560,10 @@ input[type=submit]:hover {
     width: 100%;
     margin-top: 0;
   }
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
 }
