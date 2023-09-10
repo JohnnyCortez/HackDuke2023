@@ -92,7 +92,7 @@ function App() {
         </ul>
         {user ? (
           <>
-            <p>Welcome {username}</p>
+            <p>Welcome, {username}!</p>
             <br />
           </>
         ) : (
@@ -101,7 +101,7 @@ function App() {
 
       <Routes>
         <Route exact path="/account" element={<Account />} />
-        <Route exact path="/discussion" element={<Discussion />} />
+        <Route exact path="/discussion" element={<Discussion username={username}/>} />
         <Route exact path="/footPrint" element={<FootPrint />} />
         <Route exact path="/getInvolved" element={<GetInvolved />} />
         <Route exact path="/information" element={<Information />} />

@@ -3,7 +3,7 @@ import { supabase } from '../client';
 import Post from '../components/post';
 import { Link } from 'react-router-dom';
 
-const Discussion = () => {
+const Discussion = (username) => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
@@ -31,7 +31,7 @@ const Discussion = () => {
   return (
     <div>
       <h1>Environmental Posts</h1>
-      <button><Link to="/createPost">Create Post!</Link></button>
+      {username.username === null ? "" : <button><Link to="/createPost">Create Post!</Link></button>}
       {posts.map((post, index) => (
         <Post key={index} {...post} />
       ))}
