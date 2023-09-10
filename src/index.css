@@ -418,15 +418,9 @@ p {
     line-height:1.7;
 } */
 
-<<<<<<< HEAD
-/* for all the news */ 
-#api-news {
-    display: block; 
-=======
 /* for all the news */
 /* #api-news {
     display: block;
->>>>>>> f3cbb3585157ceae7f706aae9a61734eb012b82b
     align-items: left;
     margin: 5% 0 0 5%;
 }
