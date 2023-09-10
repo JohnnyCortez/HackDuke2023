@@ -4,8 +4,9 @@ import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import { IconButton } from '@mui/material';
 
 function Home() {
+
     const images = [
-        'https://www.voicesofyouth.org/sites/voy/files/styles/big_blog_teaser/public/images/2019-09/and00089.jpg?itok=sHH-it06',
+        'https://www.youtube.com/embed/mULqSzpk_d4?autoplay=1',
         'https://cms.iqair.com/sites/default/files/blog/2021-01/CostofAir21_Desk_a.jpg', // Replace with your actual URL
         'https://www.pewtrusts.org/-/media/post-launch-images/2022/09/gettyimages1140387268jpgmaster/16x9_m.jpg', // Replace with your actual URL
       ];
@@ -25,26 +26,33 @@ function Home() {
       };
 
       return (
+
         <>
+
          <div className="home-image">
+
         {currentImageIndex === 2 ? (
           <img
             src={images[currentImageIndex]}
             alt={`Image ${currentImageIndex + 1}`}
-            style={{ width: '100%' }} // Adjust the width as needed
+            style={{ width: '100%', border: '4px solid #45503b' }} // Adjust the width as needed
           />
         ) : currentImageIndex === 0 ? (
-          <img
+        <iframe
             src={images[currentImageIndex]}
-            alt={`Image ${currentImageIndex + 1}`}
-            style={{ width: '100%' }} // Adjust the width as needed
-
-          />
+            title={`Video ${currentImageIndex + 1}`}
+            width="100%" // Adjust the width as needed
+            height="700" // Adjust the height as needed
+            frameBorder="0"
+            allowFullScreen
+            autoPlay
+            style={{ border: '4px solid #45503b' }}
+        ></iframe>
         ) : currentImageIndex === 1 ? (
           <img
           src={images[currentImageIndex]}
           alt={`Image ${currentImageIndex + 1}`}
-          style={{ width: '100%' }} // Adjust the width as needed
+          style={{ width: '100%', border: '4px solid #45503b' }} // Adjust the width as needed
 
           />
         )
@@ -54,6 +62,12 @@ function Home() {
           />
         }
       </div>
+      <div className = "gif-container">
+        <img src = "https://media.tenor.com/eQDuTRTKWDcAAAAC/waves-ocean.gif"></img>
+        </div>
+        <h1 className = "mission-title" >Our Mission</h1>
+        <p className = "mission-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
           <div className="button-container">
             <IconButton onClick={handlePreviousClick}>
               <NavigateBeforeIcon style={{ fontSize: '80', color: 'white', backgroundColor: 'transparent' }} />
@@ -62,9 +76,7 @@ function Home() {
               <NavigateNextIcon style={{ fontSize: '80', color: 'white', backgroundColor: 'transparent'}} />
             </IconButton>
           </div>
-          <div className = "mission-image">
-            <img src = "https://images.theconversation.com/files/377023/original/file-20210104-23-1gss1v1.jpg?ixlib=rb-1.1.0&rect=1%2C25%2C997%2C498&q=45&auto=format&w=1356&h=668&fit=crop"></img>
-        </div>
+
         </>
       );
 }

@@ -99,10 +99,10 @@ function CreatePost(username) {
         ))}
       </datalist>
       <label>Text:</label>
-      <input
-        type="text"
+      <textarea
         name="text"
         value={text}
+        rows="4" cols="50"
         onChange={(e) => setText(e.target.value)}
       />
       <label>Relavent Links:</label>

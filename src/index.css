@@ -242,10 +242,29 @@ margin-right: 70px;
 }
 
   .home-image {
+
     display: flex;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
   height: 80vh; /* Optional: Center within the viewport's height */
+  filter: brightness(1);
+  font-size: 120%;
+    font-family: 'EB Garamond', serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+    display: flex;
+
+  }
+
+  .home-text {
+    font-size: 120%;
+    font-family: 'EB Garamond', serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+    display: flex;
+
   }
 /*
   .navigate-left {
@@ -269,8 +288,106 @@ margin-right: 70px;
 .mission-image {
     position: relative;
     top: -90px;
+    top:-2500px;
+
+  }
+
+    .info-body-container {
+        display: flex;
+        align-items: center;
+    }
+    .info-body-container ul {
+        width: 100%;
+    }
+    .intext-pic-container {
+        display: flex;
+        width: 100%;
+        flex: 2;
+        line-height:1.7;
+    }
+    .intext-pic-container ul {
+        margin: 3% 0 0 3%;
+        width: 100%;
+        flex: 2;
+    }
+    .intext-pic-container img{
+        width: 50%;
+    }
+.plant p{
+    align-items: center;
+    margin: 10% 50% 10% 50%;
+    font-size: 300%;
+}
+.background-container h1  {
+    font-size: 200%;
+    font-family: 'EB Garamond', serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
     display: flex;
     justify-content: center;
+    margin: 20% 0 0 0;
+
+    color: white;
+    height: 20vh;
+
+}
+
+.gif-container {
+    max-width: 200%; /* Adjust the width as needed */
+    max-height: 100%;
+    justify-content: center;
+
+    /* Add other background properties as needed */
+
+  }
+
+  .mission-info {
+    color:white;
+
+
+}
+
+.mission-title{
+
+}
+
+
+/* Style for the dropdown menu container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Style for the "Sign In" link */
+.dropdown a {
+  color: #333;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+
+/* Style for the dropdown menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Style for the "Create Account" link inside the dropdown menu */
+.dropdown-content a {
+  color: #333;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Style for the dropdown menu when hovering over the parent element */
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 /* for 1 news  */
@@ -358,7 +475,8 @@ font-family: 'Montserrat', sans-serif;
     margin: 0; /* Remove default margin */
   }
 
-
   #api-news h6 {
     font-size: 13px;
   }
+
+  

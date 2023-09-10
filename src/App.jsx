@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom'; // Import Link from react-router-dom
 import Information from './pages/information';
 import Account from './pages/account';
 import Discussion from './pages/Discussion';
@@ -64,34 +64,41 @@ function App() {
 
   return (
     <>
-      <body>
         <ul className="navbar-list">
-        <li id = "home-logo"><a href = "/">Ecostart</a><img src = "https://e7.pngegg.com/pngimages/964/395/png-clipart-natural-environment-graphics-environmental-science-natural-environment-globe-logo.png"></img></li>
-      <li><a href="/news">News</a></li>
-      <li><a href="/information">Information</a></li>
-      <li><a href="/getInvolved">Get Involved</a></li>
-      <li><a href="/discussion">Discussion</a></li>
-      {user ? (
-        <>
-        <li><a href="/" onClick={(e) => { e.preventDefault(); signOut(); }}>Sign Out</a></li>
-        <li><a href="/createPost" >Post</a></li>
-        </>
-      ) : (
-        <>
-          <li><a href="/signIn">Sign In</a></li>
-          <li><a href="/createAccount">Create Account</a></li>
-        </>
-      )}
+          <li id="home-logo">
+            <a href="/">Ecostart</a>
+            <img src="https://e7.pngegg.com/pngimages/964/395/png-clipart-natural-environment-graphics-environmental-science-natural-environment-globe-logo.png" alt="Logo" />
+          </li>
+          <li><a href="/news">News</a></li>
+          <li><a href="/information">Information</a></li>
+          <li><a href="/getInvolved">Get Involved</a></li>
+          <li><a href="/discussion">Discussion</a></li>
+          {user ? (
+            <>
+              <li><a href="/" onClick={(e) => { e.preventDefault(); signOut(); }}>Sign Out</a></li>
+            </>
+          ) : (
+            <>
+              {/* Create a parent element for the dropdown */}
+              <li className="dropdown">
+                <a href="/signIn">Sign In</a>
+                {/* Create the dropdown menu */}
+                <div className="dropdown-content">
+                  <Link to="/createAccount">Create Account</Link>
+                </div>
+              </li>
+            </>
+          )}
         </ul>
         {user ? (
           <>
-            <p>Welcome {username || user}</p>
+            <p>Welcome {username}</p>
             <br />
           </>
         ) : (
           ''
         )}
-      </body>
+
       <Routes>
         <Route exact path="/account" element={<Account />} />
         <Route exact path="/discussion" element={<Discussion />} />
@@ -101,10 +108,10 @@ function App() {
         <Route exact path="/news" element={<News />} />
         <Route exact path="/createAccount" element={<CreateAccount />} />
         <Route exact path="/signIn" element={<SignIn />} />
-        <Route exact path="/createPost" element={<CreatePost username={username}/>} />
+        <Route exact path="/createPost" element={<CreatePost username={username} />} />
         <Route exact path="/" element={<Home />} />
       </Routes>
-    </>
+      </>
   );
 }
 
