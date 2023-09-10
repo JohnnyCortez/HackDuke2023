@@ -92,7 +92,7 @@ function App() {
         </ul>
         {user ? (
           <>
-            <p>Welcome, {username}!</p>
+            <p className='leftSide'><span className='bold'>Currently Logged in as: </span>{username}</p>
             <br />
           </>
         ) : (

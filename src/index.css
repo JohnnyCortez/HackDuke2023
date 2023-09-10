@@ -12,6 +12,9 @@ p {
     font-family: 'Open Sans', sans-serif;
   }
 
+  .leftSide {
+    text-align: left;
+  }
   ul.navbar-list {
     list-style-type: none;
     margin-top: -40px;
@@ -61,7 +64,7 @@ p {
 
   ul.navbar-list li a:hover {
     text-decoration: underline;
-    
+
   }
 
   .banner-image {
