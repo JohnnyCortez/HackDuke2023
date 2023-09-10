@@ -7,10 +7,12 @@ function News() {
 //
 
 
-    fetch('https://newsapi.org/v2/everything?q=climate&q=environment&from=2023-09-09&to=2023-09-09&sortBy=relevancyANDpopularity&apiKey=46ab106b4b0749b78c5899d83e96dff5',{
+
+
+    fetch('https://newsapi.org/v2/everything?q=climate&q=environment&from=2023-09-09&to=2023-09-10&sortBy=relevancyANDpopularity&apiKey=034bc25c57ca4f26bd9581adc6735772',{
     method: 'GET',
     headers: {
-        'Authorization': 'Bearer 46ab106b4b0749b78c5899d83e96dff5'
+        'Authorization': 'Bearer 034bc25c57ca4f26bd9581adc6735772'
     }
     })
     .then(res => {
@@ -29,8 +31,10 @@ function News() {
         }
         const articles = newsdata.articles;
 
-        for (let i = 0; i < 10 && i < articles.length; i++) {
+        for (let i = 0; i < 35 && i < articles.length; i++) {
+
             const article = articles[i];
+            console.log(article);
             const title = article.title;
             const description = article.description;
             const url = article.url;
@@ -62,9 +66,7 @@ function News() {
     })
     .catch(error => { // Handle errors
         console.error('Error:', error);
-    })
-//  
-    ;
+    });
 
     return (
         <>
