@@ -285,3 +285,10 @@ margin-right: 70px;
     margin: 10% 50% 10% 50%;
     font-size: 300%;
 }
+
+.mission-image {
+    position: relative;
+    top: -90px;
+    display: flex;
+    justify-content: center;
+}
