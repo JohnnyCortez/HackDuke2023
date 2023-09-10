@@ -53,12 +53,14 @@ function CreateAccount() {
     }
 
     return (
+      <>
+        <h2>Create Account</h2>
+
         <div className="form"> {/* Add class name to the container */}
             {confirm ? (
                 <p className="confirm-message">Please Confirm Your Email</p>
             ) : (
                 <>
-                    <h2 class="formH2">Create Account</h2>
                     <label>Email:</label>
                     <input
                         type="email"
@@ -79,12 +81,12 @@ function CreateAccount() {
                         name="password"
                         onChange={(e) => setPassword(e.target.value)}
                     />
-
+                  {/*
                     <label>Bio:</label>
                     <textarea
                         name="bio"
                         onChange={(e) => setBio(e.target.value)}
-                    /> {/* Use a textarea for the bio input */}
+                    />
 
                     <label>Country:</label>
                     <input
@@ -99,13 +101,13 @@ function CreateAccount() {
                         name="city"
                         onChange={(e) => setCity(e.target.value)}
                     />
-
-                    <label>State:</label>
+                  */}
+                    <label>State: (Example- TX)</label>
                     <input
                         type="text"
                         name="state"
                         onChange={(e) => setState(e.target.value)}
-                    />
+                    /> 
 
                     <label>Zip Code:</label>
                     <input
@@ -118,6 +120,7 @@ function CreateAccount() {
                 </>
             )}
         </div>
+        </>
     );
 }
 
