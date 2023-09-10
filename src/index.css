@@ -128,12 +128,13 @@ p {
 .rectangle {
     width: 50%; /* Adjust the width as needed */
     height: 400px; /* Adjust the height as needed */
-    background-color: #ace894; /* Rectangle background color */
+    background-color: #c2e1bd; /* Rectangle background color */
     border: 2px solid #45503b; /* Rectangle border */
     border-radius: 10px;
     margin-left: auto;
     display: flex;
-    margin-top: -150px;
+    margin-top: -130px;
+
 
 }
 .rectangle #pledge {
@@ -294,12 +295,13 @@ p {
     bottom: 20px; /* Default positioning for smaller screens */
     color: #45503b;
     line-height: 2.3;
+
 }
 
 /* Media query for larger screens */
 @media (min-width: 768px) {
     .button-container {
-        bottom: 850px; /* Adjust positioning for larger screens */
+        bottom: 950px; /* Adjust positioning for larger screens */
     }
 }
 
