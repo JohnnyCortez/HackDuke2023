@@ -17,6 +17,8 @@ p {
     margin: 0;
     padding: 0;
     display: flex;
+    align-items: center;
+
   }
 
   ul.navbar-list li {
@@ -32,6 +34,7 @@ p {
     font-weight: lighter;
     color: #45503b;
     font-size: 200%;
+
   }
 
   #home-logo {
@@ -415,12 +418,18 @@ p {
     line-height:1.7;
 } */
 
+<<<<<<< HEAD
+/* for all the news */ 
+#api-news {
+    display: block; 
+=======
 /* for all the news */
 /* #api-news {
     display: block;
+>>>>>>> f3cbb3585157ceae7f706aae9a61734eb012b82b
     align-items: left;
     margin: 5% 0 0 5%;
-} */
+}
 
 #api-news h2{
 padding: 7% 0 5% 0;
@@ -429,42 +438,6 @@ text-align: left;
 font-family: 'Montserrat', sans-serif;
 }
 
-/* .news-container ol {
-    width: 100%;
-    flex: 2;
-    font-size: 200%;
-    margin: 0;
-    padding: 0;
-} */
-
-/* .news-container {
-    display: flex;
-    width: 100%;
-    flex: 2;
-    line-height:1.7;
-}
-
-.news-container img{
-    width: 50%;
-}
-
-.news-container h3 {
-    display: flex;
-    margin: 3% 0 0 3%;
-    width: 50%;
-    flex: 2;
-}
-
-.news-container p {
-    margin: 3% 0 0 3%;
-    width: 100%;
-    flex: 2;
-}
-
-.news-container {
-    display: flex;
-    align-items: center;
-  } */
 
   /* Style for the ordered list */
   .news-container ol {
@@ -477,6 +450,7 @@ font-family: 'Montserrat', sans-serif;
     display: flex;
     align-items: center;
     margin-bottom: 20px; /* Adjust spacing between list items */
+    margin: 10% 0;
   }
 
   /* Style for the image */
@@ -486,12 +460,24 @@ font-family: 'Montserrat', sans-serif;
   }
 
   /* Style for the text content (heading and paragraphs) */
-  .news-container h3, .news-container p {
+  .news-container h3 {
     margin: 0; /* Remove default margin */
+    font-size: 220%;
+    text-align: justify;
+    padding: 0 0 0 5%;
+  }
+  
+  .news-container p {
+    margin: 0; /* Remove default margin */
+    font-size: 150%;
+    padding: 0 0 0 5%;
+    text-align: justify;
   }
 
-  #api-news h6 {
-    font-size: 13px;
+  #news-container h6 {
+    padding: 0 0 0 5%;
+    font-size: 25px;
+    text-align: justify;
   }
 
 
