@@ -90,6 +90,7 @@ function App() {
             </>
           )}
         </ul>
+        <body>
         {user ? (
           <>
             <p className='leftSide'><span className='bold'>Currently Logged in as: </span>{username}</p>
@@ -110,6 +111,7 @@ function App() {
         <Route exact path="/createPost" element={<CreatePost username={username} />} />
         <Route exact path="/" element={<Home />} />
       </Routes>
+      </body>
       </>
   );
 }

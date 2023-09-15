@@ -10,6 +10,8 @@ p {
     font-family: 'EB Garamond', serif;
     font-family: 'Montserrat', sans-serif;
     font-family: 'Open Sans', sans-serif;
+    margin: -8px;
+    padding: 16px;
    
   }
 
@@ -17,15 +19,11 @@ p {
     text-align: left;
   }
   ul.navbar-list {
+    margin: -8px;
     list-style-type: none;
-    margin-top: -40px;
-    margin-left: -40px;
-    margin-right: -40px;
-    padding: 0;
     display: flex;
     align-items: center;
     background-color: #8a857c;
-    border-radius: 10px;
   }
 
   ul.navbar-list li {
@@ -546,7 +544,7 @@ font-family: 'Montserrat', sans-serif;
 .form input[type="password"],
 .form input[type="number"],
 .form textarea {
-  width: 75%;
+  width: 95%;
   padding: 10px;
   margin-bottom: 20px;
   border: 1px solid #ccc;

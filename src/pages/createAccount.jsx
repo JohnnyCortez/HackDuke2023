@@ -4,11 +4,6 @@ import { supabase } from "../client";
 function CreateAccount() {
     const [username, setUsername] = useState(null);
     const [email, setEmail] = useState(null);
-    const [country, setCountry] = useState(null);
-    const [city, setCity] = useState(null);
-    const [state, setState] = useState(null);
-    const [zipCode, setZipCode] = useState(null);
-    const [bio, setBio] = useState(null);
     const [password, setPassword] = useState(null);
     const [confirm, setConfirm] = useState(false);
 
@@ -35,11 +30,6 @@ function CreateAccount() {
             .insert({
                 username: username,
                 email: email,
-                country: country,
-                city: city,
-                state: state,
-                zipCode: zipCode,
-                bio: bio,
             })
             .select();
 
@@ -47,7 +37,8 @@ function CreateAccount() {
         //   window.location = "/";
     };
 
-    function handleClick() {
+    const handleClick = async (e) => {
+        e.preventDefault()
         addAccount();
         setConfirm(true);
     }
@@ -80,40 +71,6 @@ function CreateAccount() {
                         type="password"
                         name="password"
                         onChange={(e) => setPassword(e.target.value)}
-                    />
-                  {/*
-                    <label>Bio:</label>
-                    <textarea
-                        name="bio"
-                        onChange={(e) => setBio(e.target.value)}
-                    />
-
-                    <label>Country:</label>
-                    <input
-                        type="text"
-                        name="country"
-                        onChange={(e) => setCountry(e.target.value)}
-                    />
-
-                    <label>City:</label>
-                    <input
-                        type="text"
-                        name="city"
-                        onChange={(e) => setCity(e.target.value)}
-                    />
-                  */}
-                    <label>State: (Example- TX)</label>
-                    <input
-                        type="text"
-                        name="state"
-                        onChange={(e) => setState(e.target.value)}
-                    /> 
-
-                    <label>Zip Code:</label>
-                    <input
-                        type="number"
-                        name="zipCode"
-                        onChange={(e) => setZipCode(e.target.value)}
                     />
                     <br />
                     <button onClick={handleClick}>Submit</button>
