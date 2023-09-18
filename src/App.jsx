@@ -61,12 +61,29 @@ function App() {
       console.error('Error:', error.message);
     }
   }
+  async function testButton(e){
+    try {
+      const response = await fetch('http://localhost:5000/run-python-script', {
+          method: 'POST',
+      });
+
+      if (response.status === 200) {
+          console.log('Python script executed successfully');
+      } else {
+          console.error('Error executing Python script');
+      }
+  } catch (error) {
+      console.error('An error occurred:', error);
+  }
+
+  }
 
   return (
     <>
         <ul className="navbar-list">
           <li id="home-logo">
             <a href="/" id="homelogolink">EcoStart</a>
+            <button onClick={testButton}>Test</button>
             <img src="https://e7.pngegg.com/pngimages/964/395/png-clipart-natural-environment-graphics-environmental-science-natural-environment-globe-logo.png" alt="Logo" />
           </li>
           <li><a href="/news">News</a></li>
